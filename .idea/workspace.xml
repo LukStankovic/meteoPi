@@ -40,8 +40,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="30">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -243,7 +243,7 @@
       <workItem from="1475587950850" duration="2210000" />
       <workItem from="1475601812722" duration="1492000" />
       <workItem from="1475603443466" duration="3373000" />
-      <workItem from="1475607533367" duration="192000" />
+      <workItem from="1475607533367" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary="Úprava configu">
       <created>1475602936401</created>
@@ -294,11 +294,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475607611462</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Error in gitignore">
+      <created>1475607779379</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1475607779379</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7282000" />
+    <option name="totallyTimeSpent" value="7389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-280" width="1920" height="1080" extended-state="0" />
@@ -344,7 +351,8 @@
     <MESSAGE value="Averages temperature" />
     <MESSAGE value="Test" />
     <MESSAGE value="Připojení k databázi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Připojení k databázi" />
+    <MESSAGE value="Error in gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error in gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -489,8 +497,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
         </state>
       </provider>
