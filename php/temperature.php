@@ -58,4 +58,24 @@ class temperature{
             return false;
     }
 
+    public function averageTotalTemperature(){
+        $result = dibi::query('SELECT avg(teplota) as countrows FROM teplota');
+        return $result->fetchSingle();
+    }
+
+    public function averageDayTemperature(){
+
+        $total = 0;
+
+        for($i = 0; $i < $this->countRows(); $i++) {
+
+            $total += $this->getTemperature($i);
+
+            if ($this->newDay($i))
+                break;
+        }
+
+        return $total/$i;
+    }
+
 }

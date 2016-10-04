@@ -1,5 +1,5 @@
 <?php
-    include_once 'php/config.php';
+    include_once "php/config.php";
 
     $temp = new temperature();
 ?>
@@ -18,7 +18,8 @@
 
     <h2>Cajky</h2>
     <ul>
-        <li>Průměrná celková teplota: <?php echo "";?></li>
+        <li>Průměrná denní teplota: <strong><?php echo $temp->averageTotalTemperature();?></strong></li>
+        <li>Průměrná celková teplota: <strong><?php echo $temp->averageDayTemperature();?></strong></li>
     </ul>
 
     <h2>Teploty po 15 minutách</h2>
