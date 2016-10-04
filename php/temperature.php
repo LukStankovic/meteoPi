@@ -47,6 +47,10 @@ class temperature{
         return date("j. n. Y H:i",strtotime($date));
     }
 
+    public function timeFormat($date){
+        return date("H:i",strtotime($date));
+    }
+
     public function dayFormat($date){
         return date("j",strtotime($date));
     }
@@ -78,4 +82,48 @@ class temperature{
         return $total/$i;
     }
 
+    public function maxDayTemperature(){
+        $max["temperature"] = -1000;
+        for($i = 0; $i < $this->countRows(); $i++) {
+
+            if($this->getTemperature($i) > $max["temperature"]) {
+                $max["temperature"] = $this->getTemperature($i);
+                $max["date"] = $this->timeFormat($this->getDate($i));
+            }
+
+            if ($this->newDay($i))
+                break;
+        }
+
+        return $max;
+    }
+
+    public function minDayTemperature(){
+        $min["temperature"] = 1000;
+        for($i = 0; $i < $this->countRows(); $i++) {
+
+            if($this->getTemperature($i) < $min["temperature"]) {
+                $min["temperature"] = $this->getTemperature($i);
+                $min["date"] = $this->timeFormat($this->getDate($i));
+            }
+
+            if ($this->newDay($i))
+                break;
+        }
+
+        return $min;
+    }
+
+    public function maxTotalTemperature(){
+        $result = dibi::query('SELECT teplota as temperature, datum as date FROM teplota WHERE teplota = (SELECT max(teplota) FROM teplota ) ');
+
+        return $result->fetchAll()[0];
+
+    }
+
+    public function minTotalTemperature(){
+        $result = dibi::query('SELECT teplota as temperature, datum as date FROM teplota WHERE teplota = (SELECT min(teplota) FROM teplota ) ');
+
+        return $result->fetchAll()[0];
+    }
 }
