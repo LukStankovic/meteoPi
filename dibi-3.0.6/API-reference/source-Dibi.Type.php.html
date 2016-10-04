@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+	<meta name="robots" content="noindex">
+
+	<title>File Dibi/Type.php | Dibi 3.0.6 API documentation</title>
+
+	<link rel="stylesheet" href="resources/style.css?2213164932">
+	<link rel="search" type="application/opensearchdescription+xml" title="Dibi 3.0.6 API documentation" href="https://api.dibiphp.com/opensearch.xml">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Dibi.html">Dibi<span></span></a>
+						<ul>
+				<li><a href="namespace-Dibi.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Dibi.Bridges.Nette.html">Nette</a>
+						</li>
+				<li><a href="namespace-Dibi.Bridges.Tracy.html">Tracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Dibi.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Dibi.Loggers.html">Loggers</a>
+						</li>
+				<li><a href="namespace-Dibi.Reflection.html">Reflection</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Dibi.Connection.html">Connection</a></li>
+				<li><a href="Dibi.DataSource.html">DataSource</a></li>
+				<li><a href="Dibi.DateTime.html">DateTime</a></li>
+				<li><a href="Dibi.Event.html">Event</a></li>
+				<li><a href="Dibi.Fluent.html">Fluent</a></li>
+				<li><a href="Dibi.Helpers.html">Helpers</a></li>
+				<li><a href="Dibi.Literal.html">Literal</a></li>
+				<li><a href="Dibi.Result.html">Result</a></li>
+				<li><a href="Dibi.ResultIterator.html">ResultIterator</a></li>
+				<li><a href="Dibi.Row.html">Row</a></li>
+				<li><a href="Dibi.Translator.html">Translator</a></li>
+				<li class="active"><a href="Dibi.Type.html">Type</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Dibi.Driver.html">Driver</a></li>
+				<li><a href="Dibi.IDataSource.html">IDataSource</a></li>
+				<li><a href="Dibi.Reflector.html">Reflector</a></li>
+				<li><a href="Dibi.ResultDriver.html">ResultDriver</a></li>
+			</ul>
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="Dibi.Strict.html">Strict</a></li>
+			</ul>
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Dibi.ConstraintViolationException.html">ConstraintViolationException</a></li>
+				<li><a href="Dibi.DriverException.html">DriverException</a></li>
+				<li><a href="Dibi.Exception.html">Exception</a></li>
+				<li><a href="Dibi.ForeignKeyConstraintViolationException.html">ForeignKeyConstraintViolationException</a></li>
+				<li><a href="Dibi.NotImplementedException.html">NotImplementedException</a></li>
+				<li><a href="Dibi.NotNullConstraintViolationException.html">NotNullConstraintViolationException</a></li>
+				<li><a href="Dibi.NotSupportedException.html">NotSupportedException</a></li>
+				<li><a href="Dibi.PcreException.html">PcreException</a></li>
+				<li><a href="Dibi.ProcedureException.html">ProcedureException</a></li>
+				<li><a href="Dibi.UniqueConstraintViolationException.html">UniqueConstraintViolationException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="https://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Dibi.html" title="Summary of Dibi"><span>Namespace</span></a>
+			</li>
+			<li>
+				<a href="Dibi.Type.html" title="Summary of Dibi\Type"><span>Class</span></a>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
+</span><span id="2" class="l"><a class="l" href="#2"> 2: </a>
+</span><span id="3" class="l"><a class="l" href="#3"> 3: </a><span class="php-comment">/**
+</span></span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-comment"> * This file is part of the &quot;dibi&quot; - smart database abstraction layer.
+</span></span><span id="5" class="l"><a class="l" href="#5"> 5: </a><span class="php-comment"> * Copyright (c) 2005 David Grudl (https://davidgrudl.com)
+</span></span><span id="6" class="l"><a class="l" href="#6"> 6: </a><span class="php-comment"> */</span>
+</span><span id="7" class="l"><a class="l" href="#7"> 7: </a>
+</span><span id="8" class="l"><a class="l" href="#8"> 8: </a><span class="php-keyword1">namespace</span> Dibi;
+</span><span id="9" class="l"><a class="l" href="#9"> 9: </a>
+</span><span id="10" class="l"><a class="l" href="#10">10: </a>
+</span><span id="11" class="l"><a class="l" href="#11">11: </a><span class="php-comment">/**
+</span></span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-comment"> * Data types.
+</span></span><span id="13" class="l"><a class="l" href="#13">13: </a><span class="php-comment"> */</span>
+</span><span id="14" class="l"><a class="l" href="#14">14: </a><span class="php-keyword1">class</span> <a id="Type" href="#Type">Type</a>
+</span><span id="15" class="l"><a class="l" href="#15">15: </a>{
+</span><span id="16" class="l"><a class="l" href="#16">16: </a>    <span class="php-keyword1">const</span>
+</span><span id="17" class="l"><a class="l" href="#17">17: </a>        <a id="TEXT" href="#TEXT">TEXT</a> = <span class="php-quote">'s'</span>, <span class="php-comment">// as 'string'</span>
+</span><span id="18" class="l"><a class="l" href="#18">18: </a>        <a id="BINARY" href="#BINARY">BINARY</a> = <span class="php-quote">'bin'</span>,
+</span><span id="19" class="l"><a class="l" href="#19">19: </a>        <a id="BOOL" href="#BOOL">BOOL</a> = <span class="php-quote">'b'</span>,
+</span><span id="20" class="l"><a class="l" href="#20">20: </a>        <a id="INTEGER" href="#INTEGER">INTEGER</a> = <span class="php-quote">'i'</span>,
+</span><span id="21" class="l"><a class="l" href="#21">21: </a>        <a id="FLOAT" href="#FLOAT">FLOAT</a> = <span class="php-quote">'f'</span>,
+</span><span id="22" class="l"><a class="l" href="#22">22: </a>        <span class="php-keyword2">DATE</span> = <span class="php-quote">'d'</span>,
+</span><span id="23" class="l"><a class="l" href="#23">23: </a>        <a id="DATETIME" href="#DATETIME">DATETIME</a> = <span class="php-quote">'dt'</span>,
+</span><span id="24" class="l"><a class="l" href="#24">24: </a>        <span class="php-keyword2">TIME</span> = <span class="php-quote">'t'</span>,
+</span><span id="25" class="l"><a class="l" href="#25">25: </a>        <a id="TIME_INTERVAL" href="#TIME_INTERVAL">TIME_INTERVAL</a> = <span class="php-quote">'ti'</span>;
+</span><span id="26" class="l"><a class="l" href="#26">26: </a>
+</span><span id="27" class="l"><a class="l" href="#27">27: </a>    <span class="php-keyword1">final</span> <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="___construct" href="#___construct">__construct</a>()
+</span><span id="28" class="l"><a class="l" href="#28">28: </a>    {
+</span><span id="29" class="l"><a class="l" href="#29">29: </a>        <span class="php-keyword1">throw</span> <span class="php-keyword1">new</span> \LogicException(<span class="php-quote">'Cannot instantiate static class '</span> . __CLASS__);
+</span><span id="30" class="l"><a class="l" href="#30">30: </a>    }
+</span><span id="31" class="l"><a class="l" href="#31">31: </a>
+</span><span id="32" class="l"><a class="l" href="#32">32: </a>}
+</span><span id="33" class="l"><a class="l" href="#33">33: </a></span></code></pre>
+
+	<div id="footer">
+		Dibi 3.0.6 API documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?1765913165"></script>
+<script src="elementlist.js?1496387304"></script>
+</body>
+</html>

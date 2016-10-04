@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://api.dibiphp.com/index.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/namespace-Dibi.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/namespace-Dibi.Bridges.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/namespace-Dibi.Bridges.Nette.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/namespace-Dibi.Bridges.Tracy.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/namespace-Dibi.Drivers.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/namespace-Dibi.Loggers.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/namespace-Dibi.Reflection.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/namespace-none.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/namespace-PHP.html</loc>
+</url>
+
+
+<url>
+	<loc>https://api.dibiphp.com/DateTime.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/DateTimeZone.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/dibi.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Bridges.Nette.DibiExtension21.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Bridges.Nette.DibiExtension22.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Bridges.Nette.Panel.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Bridges.Tracy.Panel.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Connection.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.DataSource.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.DateTime.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Drivers.FirebirdDriver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Drivers.MsSqlDriver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Drivers.MySqlDriver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Drivers.MySqliDriver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Drivers.OdbcDriver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Drivers.OracleDriver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Drivers.PdoDriver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Drivers.PostgreDriver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Drivers.Sqlite3Driver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Drivers.SqlsrvDriver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Event.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Fluent.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Helpers.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Literal.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Loggers.FileLogger.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Loggers.FirePhpLogger.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Reflection.Column.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Reflection.Database.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Reflection.ForeignKey.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Reflection.Index.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Reflection.Result.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Reflection.Table.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Result.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.ResultIterator.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Row.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Translator.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Type.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/PDO.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/PDOStatement.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/ArrayAccess.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Countable.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Driver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.IDataSource.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Reflector.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.ResultDriver.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Iterator.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/IteratorAggregate.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Reflector.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Traversable.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Strict.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.ConstraintViolationException.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.DriverException.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.Exception.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.ForeignKeyConstraintViolationException.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.NotImplementedException.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.NotNullConstraintViolationException.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.NotSupportedException.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.PcreException.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.ProcedureException.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Dibi.UniqueConstraintViolationException.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/Exception.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/InvalidArgumentException.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/LogicException.html</loc>
+</url>
+<url>
+	<loc>https://api.dibiphp.com/RuntimeException.html</loc>
+</url>
+</urlset>

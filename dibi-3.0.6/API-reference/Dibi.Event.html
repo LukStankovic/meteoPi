@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Dibi\Event | Dibi 3.0.6 API documentation</title>
+
+	<link rel="stylesheet" href="resources/style.css?2213164932">
+	<link rel="search" type="application/opensearchdescription+xml" title="Dibi 3.0.6 API documentation" href="https://api.dibiphp.com/opensearch.xml">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Dibi.html">Dibi<span></span></a>
+						<ul>
+				<li><a href="namespace-Dibi.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Dibi.Bridges.Nette.html">Nette</a>
+						</li>
+				<li><a href="namespace-Dibi.Bridges.Tracy.html">Tracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Dibi.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Dibi.Loggers.html">Loggers</a>
+						</li>
+				<li><a href="namespace-Dibi.Reflection.html">Reflection</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Dibi.Connection.html">Connection</a></li>
+				<li><a href="Dibi.DataSource.html">DataSource</a></li>
+				<li><a href="Dibi.DateTime.html">DateTime</a></li>
+				<li class="active"><a href="Dibi.Event.html">Event</a></li>
+				<li><a href="Dibi.Fluent.html">Fluent</a></li>
+				<li><a href="Dibi.Helpers.html">Helpers</a></li>
+				<li><a href="Dibi.Literal.html">Literal</a></li>
+				<li><a href="Dibi.Result.html">Result</a></li>
+				<li><a href="Dibi.ResultIterator.html">ResultIterator</a></li>
+				<li><a href="Dibi.Row.html">Row</a></li>
+				<li><a href="Dibi.Translator.html">Translator</a></li>
+				<li><a href="Dibi.Type.html">Type</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="Dibi.Driver.html">Driver</a></li>
+				<li><a href="Dibi.IDataSource.html">IDataSource</a></li>
+				<li><a href="Dibi.Reflector.html">Reflector</a></li>
+				<li><a href="Dibi.ResultDriver.html">ResultDriver</a></li>
+			</ul>
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="Dibi.Strict.html">Strict</a></li>
+			</ul>
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Dibi.ConstraintViolationException.html">ConstraintViolationException</a></li>
+				<li><a href="Dibi.DriverException.html">DriverException</a></li>
+				<li><a href="Dibi.Exception.html">Exception</a></li>
+				<li><a href="Dibi.ForeignKeyConstraintViolationException.html">ForeignKeyConstraintViolationException</a></li>
+				<li><a href="Dibi.NotImplementedException.html">NotImplementedException</a></li>
+				<li><a href="Dibi.NotNullConstraintViolationException.html">NotNullConstraintViolationException</a></li>
+				<li><a href="Dibi.NotSupportedException.html">NotSupportedException</a></li>
+				<li><a href="Dibi.PcreException.html">PcreException</a></li>
+				<li><a href="Dibi.ProcedureException.html">ProcedureException</a></li>
+				<li><a href="Dibi.UniqueConstraintViolationException.html">UniqueConstraintViolationException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="https://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Dibi.html" title="Summary of Dibi"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Event</h1>
+
+
+	<div class="description">
+	
+<p>Profiler &amp; logger event.</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Dibi\Event</span></b>			
+			
+			 uses 
+				<a href="Dibi.Strict.html"><span>Dibi\Strict</span></a>
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Dibi.html">Dibi</a><br>
+		
+
+		<b>Located at</b> <a href="source-Dibi.Event.php.html#11-98" title="Go to source code">Dibi/Event.php</a><br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-Dibi.Event.php.html#53-80" title="Go to source code">__construct</a>( <span><code><a href="Dibi.Connection.html">Dibi\Connection</a></code> <var>$connection</var></span>, <span> <var>$type</var></span>, <span> <var>$sql</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="done" id="_done">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_done">#</a>
+		<code><a href="source-Dibi.Event.php.html#83-96" title="Go to source code">done</a>( <span> <var>$result</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+	<table class="summary used">
+	<caption>Methods used from <a href="Dibi.Strict.html#methods">Dibi\Strict</a></caption>
+	<tr>
+		<td><code>
+			<a href="Dibi.Strict.html#___call">__call()</a>, 
+			<a href="Dibi.Strict.html#___callStatic">__callStatic()</a>, 
+			<a href="Dibi.Strict.html#___get">__get()</a>, 
+			<a href="Dibi.Strict.html#___isset">__isset()</a>, 
+			<a href="Dibi.Strict.html#___set">__set()</a>, 
+			<a href="Dibi.Strict.html#___unset">__unset()</a>, 
+			<a href="Dibi.Strict.html#_extensionMethod">extensionMethod()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="CONNECT" id="CONNECT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Event.php.html#18-19" title="Go to source code"><b>CONNECT</b></a>
+			</code>
+
+			<div class="description short">
+				
+<p>event type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>event type</p>
+
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#CONNECT" class="anchor">#</a><code><span class="php-num">1</span></code></div></td>
+	</tr>
+	<tr data-order="SELECT" id="SELECT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Event.php.html#19-20" title="Go to source code"><b>SELECT</b></a>
+			</code>
+
+			<div class="description short">
+				
+<p>event type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>event type</p>
+
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#SELECT" class="anchor">#</a><code><span class="php-num">4</span></code></div></td>
+	</tr>
+	<tr data-order="INSERT" id="INSERT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Event.php.html#20-21" title="Go to source code"><b>INSERT</b></a>
+			</code>
+
+			<div class="description short">
+				
+<p>event type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>event type</p>
+
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#INSERT" class="anchor">#</a><code><span class="php-num">8</span></code></div></td>
+	</tr>
+	<tr data-order="DELETE" id="DELETE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Event.php.html#21-22" title="Go to source code"><b>DELETE</b></a>
+			</code>
+
+			<div class="description short">
+				
+<p>event type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>event type</p>
+
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#DELETE" class="anchor">#</a><code><span class="php-num">16</span></code></div></td>
+	</tr>
+	<tr data-order="UPDATE" id="UPDATE">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Event.php.html#22-23" title="Go to source code"><b>UPDATE</b></a>
+			</code>
+
+			<div class="description short">
+				
+<p>event type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>event type</p>
+
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#UPDATE" class="anchor">#</a><code><span class="php-num">32</span></code></div></td>
+	</tr>
+	<tr data-order="QUERY" id="QUERY">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Event.php.html#23-24" title="Go to source code"><b>QUERY</b></a>
+			</code>
+
+			<div class="description short">
+				
+<p>event type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>event type</p>
+
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#QUERY" class="anchor">#</a><code><span class="php-num">60</span></code></div></td>
+	</tr>
+	<tr data-order="BEGIN" id="BEGIN">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Event.php.html#24-25" title="Go to source code"><b>BEGIN</b></a>
+			</code>
+
+			<div class="description short">
+				
+<p>event type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>event type</p>
+
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#BEGIN" class="anchor">#</a><code><span class="php-num">64</span></code></div></td>
+	</tr>
+	<tr data-order="COMMIT" id="COMMIT">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Event.php.html#25-26" title="Go to source code"><b>COMMIT</b></a>
+			</code>
+
+			<div class="description short">
+				
+<p>event type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>event type</p>
+
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#COMMIT" class="anchor">#</a><code><span class="php-num">128</span></code></div></td>
+	</tr>
+	<tr data-order="ROLLBACK" id="ROLLBACK">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Event.php.html#26-27" title="Go to source code"><b>ROLLBACK</b></a>
+			</code>
+
+			<div class="description short">
+				
+<p>event type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>event type</p>
+
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#ROLLBACK" class="anchor">#</a><code><span class="php-num">256</span></code></div></td>
+	</tr>
+	<tr data-order="TRANSACTION" id="TRANSACTION">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Event.php.html#27-28" title="Go to source code"><b>TRANSACTION</b></a>
+			</code>
+
+			<div class="description short">
+				
+<p>event type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>event type</p>
+
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#TRANSACTION" class="anchor">#</a><code><span class="php-num">448</span></code></div></td>
+	</tr>
+	<tr data-order="ALL" id="ALL">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Event.php.html#28-29" title="Go to source code"><b>ALL</b></a>
+			</code>
+
+			<div class="description short">
+				
+<p>event type</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>event type</p>
+
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#ALL" class="anchor">#</a><code><span class="php-num">1023</span></code></div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="connection" id="$connection">
+		<td class="attributes"><code>
+			public  
+			<code><a href="Dibi.Connection.html">Dibi\Connection</a></code>
+		</code></td>
+
+		<td class="name">
+				<a href="source-Dibi.Event.php.html#31-32" title="Go to source code"><var>$connection</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$connection" class="anchor">#</a><code></code></div></td>
+	</tr>
+	<tr data-order="type" id="$type">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Dibi.Event.php.html#34-35" title="Go to source code"><var>$type</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$type" class="anchor">#</a><code></code></div></td>
+	</tr>
+	<tr data-order="sql" id="$sql">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+				<a href="source-Dibi.Event.php.html#37-38" title="Go to source code"><var>$sql</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$sql" class="anchor">#</a><code></code></div></td>
+	</tr>
+	<tr data-order="result" id="$result">
+		<td class="attributes"><code>
+			public  
+			<code><a href="Dibi.Result.html">Dibi\Result</a></code>|<code><a href="Dibi.DriverException.html">Dibi\DriverException</a></code>|null
+		</code></td>
+
+		<td class="name">
+				<a href="source-Dibi.Event.php.html#40-41" title="Go to source code"><var>$result</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$result" class="anchor">#</a><code></code></div></td>
+	</tr>
+	<tr data-order="time" id="$time">
+		<td class="attributes"><code>
+			public  
+			float
+		</code></td>
+
+		<td class="name">
+				<a href="source-Dibi.Event.php.html#43-44" title="Go to source code"><var>$time</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$time" class="anchor">#</a><code></code></div></td>
+	</tr>
+	<tr data-order="count" id="$count">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+				<a href="source-Dibi.Event.php.html#46-47" title="Go to source code"><var>$count</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$count" class="anchor">#</a><code></code></div></td>
+	</tr>
+	<tr data-order="source" id="$source">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-Dibi.Event.php.html#49-50" title="Go to source code"><var>$source</var></a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$source" class="anchor">#</a><code></code></div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Dibi 3.0.6 API documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?1765913165"></script>
+<script src="elementlist.js?1496387304"></script>
+</body>
+</html>

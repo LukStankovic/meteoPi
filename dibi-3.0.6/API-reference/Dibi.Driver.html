@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Interface Dibi\Driver | Dibi 3.0.6 API documentation</title>
+
+	<link rel="stylesheet" href="resources/style.css?2213164932">
+	<link rel="search" type="application/opensearchdescription+xml" title="Dibi 3.0.6 API documentation" href="https://api.dibiphp.com/opensearch.xml">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Dibi.html">Dibi<span></span></a>
+						<ul>
+				<li><a href="namespace-Dibi.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Dibi.Bridges.Nette.html">Nette</a>
+						</li>
+				<li><a href="namespace-Dibi.Bridges.Tracy.html">Tracy</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Dibi.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Dibi.Loggers.html">Loggers</a>
+						</li>
+				<li><a href="namespace-Dibi.Reflection.html">Reflection</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Dibi.Connection.html">Connection</a></li>
+				<li><a href="Dibi.DataSource.html">DataSource</a></li>
+				<li><a href="Dibi.DateTime.html">DateTime</a></li>
+				<li><a href="Dibi.Event.html">Event</a></li>
+				<li><a href="Dibi.Fluent.html">Fluent</a></li>
+				<li><a href="Dibi.Helpers.html">Helpers</a></li>
+				<li><a href="Dibi.Literal.html">Literal</a></li>
+				<li><a href="Dibi.Result.html">Result</a></li>
+				<li><a href="Dibi.ResultIterator.html">ResultIterator</a></li>
+				<li><a href="Dibi.Row.html">Row</a></li>
+				<li><a href="Dibi.Translator.html">Translator</a></li>
+				<li><a href="Dibi.Type.html">Type</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="Dibi.Driver.html">Driver</a></li>
+				<li><a href="Dibi.IDataSource.html">IDataSource</a></li>
+				<li><a href="Dibi.Reflector.html">Reflector</a></li>
+				<li><a href="Dibi.ResultDriver.html">ResultDriver</a></li>
+			</ul>
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="Dibi.Strict.html">Strict</a></li>
+			</ul>
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="Dibi.ConstraintViolationException.html">ConstraintViolationException</a></li>
+				<li><a href="Dibi.DriverException.html">DriverException</a></li>
+				<li><a href="Dibi.Exception.html">Exception</a></li>
+				<li><a href="Dibi.ForeignKeyConstraintViolationException.html">ForeignKeyConstraintViolationException</a></li>
+				<li><a href="Dibi.NotImplementedException.html">NotImplementedException</a></li>
+				<li><a href="Dibi.NotNullConstraintViolationException.html">NotNullConstraintViolationException</a></li>
+				<li><a href="Dibi.NotSupportedException.html">NotSupportedException</a></li>
+				<li><a href="Dibi.PcreException.html">PcreException</a></li>
+				<li><a href="Dibi.ProcedureException.html">ProcedureException</a></li>
+				<li><a href="Dibi.UniqueConstraintViolationException.html">UniqueConstraintViolationException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="https://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Dibi.html" title="Summary of Dibi"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface Driver</h1>
+
+
+	<div class="description">
+	
+<p>dibi driver interface.</p>
+
+	</div>
+
+
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="Dibi.Drivers.FirebirdDriver.html">Dibi\Drivers\FirebirdDriver</a>, 
+			<a href="Dibi.Drivers.MsSqlDriver.html">Dibi\Drivers\MsSqlDriver</a>, 
+			<a href="Dibi.Drivers.MySqlDriver.html">Dibi\Drivers\MySqlDriver</a>, 
+			<a href="Dibi.Drivers.MySqliDriver.html">Dibi\Drivers\MySqliDriver</a>, 
+			<a href="Dibi.Drivers.OdbcDriver.html">Dibi\Drivers\OdbcDriver</a>, 
+			<a href="Dibi.Drivers.OracleDriver.html">Dibi\Drivers\OracleDriver</a>, 
+			<a href="Dibi.Drivers.PdoDriver.html">Dibi\Drivers\PdoDriver</a>, 
+			<a href="Dibi.Drivers.PostgreDriver.html">Dibi\Drivers\PostgreDriver</a>, 
+			<a href="Dibi.Drivers.Sqlite3Driver.html">Dibi\Drivers\Sqlite3Driver</a>, 
+			<a href="Dibi.Drivers.SqlsrvDriver.html">Dibi\Drivers\SqlsrvDriver</a>
+	</div>
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Dibi.html">Dibi</a><br>
+		
+
+		<b>Located at</b> <a href="source-Dibi.interfaces.php.html#21-129" title="Go to source code">Dibi/interfaces.php</a><br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="connect" id="_connect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_connect">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#27-33" title="Go to source code">connect</a>( <span>array <var>&amp; $config</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Connects to a database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Connects to a database.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.Exception.html">Dibi\Exception</a></code></code><br>Exception<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="disconnect" id="_disconnect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_disconnect">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#35-40" title="Go to source code">disconnect</a>( )</code>
+
+		<div class="description short">
+			
+<p>Disconnects from a database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Disconnects from a database.</p>
+
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.Exception.html">Dibi\Exception</a></code></code><br>Exception<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="query" id="_query">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Dibi.ResultDriver.html">Dibi\ResultDriver</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_query">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#42-48" title="Go to source code">query</a>( <span>string <var>$sql</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Internal: Executes the SQL query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Internal: Executes the SQL query.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd>statement.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Dibi.ResultDriver.html">Dibi\ResultDriver</a></code>|null</code><br>ResultDriver|NULL<br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.DriverException.html">Dibi\DriverException</a></code></code><br>DriverException<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAffectedRows" id="_getAffectedRows">
+
+		<td class="attributes"><code>
+			 public 
+			integer|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAffectedRows">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#50-54" title="Go to source code">getAffectedRows</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the number of affected rows by the last INSERT, UPDATE or DELETE
+query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the number of affected rows by the last INSERT, UPDATE or DELETE
+query.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer|false</code><br>number of rows or FALSE on error<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInsertId" id="_getInsertId">
+
+		<td class="attributes"><code>
+			 public 
+			integer|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInsertId">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#56-60" title="Go to source code">getInsertId</a>( <span> <var>$sequence</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Retrieves the ID generated for an AUTO_INCREMENT column by the previous
+INSERT query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retrieves the ID generated for an AUTO_INCREMENT column by the previous
+INSERT query.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer|false</code><br>int on success or FALSE on failure<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="begin" id="_begin">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_begin">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#62-68" title="Go to source code">begin</a>( <span>string <var>$savepoint</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Begins a transaction (if supported).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Begins a transaction (if supported).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$savepoint</var></dt>
+					<dd>savepoint name</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.DriverException.html">Dibi\DriverException</a></code></code><br>DriverException<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="commit" id="_commit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_commit">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#70-76" title="Go to source code">commit</a>( <span>string <var>$savepoint</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Commits statements in a transaction.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Commits statements in a transaction.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$savepoint</var></dt>
+					<dd>savepoint name</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.DriverException.html">Dibi\DriverException</a></code></code><br>DriverException<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rollback" id="_rollback">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_rollback">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#78-84" title="Go to source code">rollback</a>( <span>string <var>$savepoint</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Rollback changes in a transaction.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rollback changes in a transaction.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$savepoint</var></dt>
+					<dd>savepoint name</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.DriverException.html">Dibi\DriverException</a></code></code><br>DriverException<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResource" id="_getResource">
+
+		<td class="attributes"><code>
+			 public 
+			mixed
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResource">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#86-90" title="Go to source code">getResource</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the connection resource.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the connection resource.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mixed</code><br>mixed<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getReflector" id="_getReflector">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Dibi.Reflector.html">Dibi\Reflector</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getReflector">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#92-96" title="Go to source code">getReflector</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the connection reflector.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the connection reflector.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Dibi.Reflector.html">Dibi\Reflector</a></code></code><br>Reflector<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeText" id="_escapeText">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeText">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#98-103" title="Go to source code">escapeText</a>( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Encodes data for use in a SQL statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Encodes data for use in a SQL statement.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>encoded value<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeBinary" id="_escapeBinary">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeBinary">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#105" title="Go to source code">escapeBinary</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeIdentifier" id="_escapeIdentifier">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeIdentifier">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#107" title="Go to source code">escapeIdentifier</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeBool" id="_escapeBool">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeBool">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#109" title="Go to source code">escapeBool</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeDate" id="_escapeDate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeDate">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#111" title="Go to source code">escapeDate</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeDateTime" id="_escapeDateTime">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeDateTime">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#113" title="Go to source code">escapeDateTime</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeLike" id="_escapeLike">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeLike">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#115-121" title="Go to source code">escapeLike</a>( <span>string <var>$value</var></span>, <span>integer <var>$pos</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Encodes string for use in a LIKE statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Encodes string for use in a LIKE statement.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$pos</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>string<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyLimit" id="_applyLimit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyLimit">#</a>
+		<code><a href="source-Dibi.interfaces.php.html#123-127" title="Go to source code">applyLimit</a>( <span> <var>&amp; $sql</var></span>, <span> <var>$limit</var></span>, <span> <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Injects LIMIT/OFFSET to the SQL query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Injects LIMIT/OFFSET to the SQL query.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Dibi 3.0.6 API documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?1765913165"></script>
+<script src="elementlist.js?1496387304"></script>
+</body>
+</html>

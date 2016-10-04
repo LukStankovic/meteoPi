@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class Dibi\Drivers\MySqliDriver | Dibi 3.0.6 API documentation</title>
+
+	<link rel="stylesheet" href="resources/style.css?2213164932">
+	<link rel="search" type="application/opensearchdescription+xml" title="Dibi 3.0.6 API documentation" href="https://api.dibiphp.com/opensearch.xml">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-Dibi.html">Dibi<span></span></a>
+						<ul>
+				<li><a href="namespace-Dibi.Bridges.html">Bridges<span></span></a>
+						<ul>
+				<li><a href="namespace-Dibi.Bridges.Nette.html">Nette</a>
+						</li>
+				<li><a href="namespace-Dibi.Bridges.Tracy.html">Tracy</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-Dibi.Drivers.html">Drivers</a>
+						</li>
+				<li><a href="namespace-Dibi.Loggers.html">Loggers</a>
+						</li>
+				<li><a href="namespace-Dibi.Reflection.html">Reflection</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-none.html">none</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="Dibi.Drivers.FirebirdDriver.html">FirebirdDriver</a></li>
+				<li><a href="Dibi.Drivers.MsSqlDriver.html">MsSqlDriver</a></li>
+				<li><a href="Dibi.Drivers.MySqlDriver.html">MySqlDriver</a></li>
+				<li class="active"><a href="Dibi.Drivers.MySqliDriver.html">MySqliDriver</a></li>
+				<li><a href="Dibi.Drivers.OdbcDriver.html">OdbcDriver</a></li>
+				<li><a href="Dibi.Drivers.OracleDriver.html">OracleDriver</a></li>
+				<li><a href="Dibi.Drivers.PdoDriver.html">PdoDriver</a></li>
+				<li><a href="Dibi.Drivers.PostgreDriver.html">PostgreDriver</a></li>
+				<li><a href="Dibi.Drivers.Sqlite3Driver.html">Sqlite3Driver</a></li>
+				<li><a href="Dibi.Drivers.SqlsrvDriver.html">SqlsrvDriver</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form action="https://www.google.com/cse" id="search">
+		<input type="hidden" name="cx" value="011549293477758430224:vxofa9ufnhc">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-Dibi.Drivers.html" title="Summary of Dibi\Drivers"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+			<li>
+				<a href="deprecated.html" title="List of deprecated elements"><span>Deprecated</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class MySqliDriver</h1>
+
+
+	<div class="description">
+	
+<p>The dibi driver for MySQL database via improved extension.</p>
+
+<p>Driver options: - host =&gt; the MySQL server host name - port (int) =&gt;
+the port number to attempt to connect to the MySQL server - socket =&gt; the
+socket or named pipe - username (or user) - password (or pass) - database =&gt;
+the database name to select - options (array) =&gt; array of driver specific
+constants (MYSQLI_*) and values mysqli_options - flags (int) =&gt; driver
+specific constants (MYSQLI_CLIENT_*) mysqli_real_connect - charset =&gt;
+character encoding to set (default is utf8) - persistent (bool) =&gt; try to
+find a persistent link? - unbuffered (bool) =&gt; sends query without fetching
+and buffering the result rows automatically? - sqlmode =&gt; see <a
+href="http://dev.mysql.com/doc/refman/5.0/en/server-sql-mode.html">http://dev.mysql.com/doc/refman/5.0/en/server-sql-mode.html</a>
+- resource (mysqli) =&gt; existing connection resource - lazy, profiler, result,
+substitutes, ... =&gt; see Dibi\Connection options</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+<b><span>Dibi\Drivers\MySqliDriver</span></b>			
+			 implements 
+				<a href="Dibi.Driver.html"><span>Dibi\Driver</span></a>, 
+			
+				<a href="Dibi.ResultDriver.html"><span>Dibi\ResultDriver</span></a>
+			
+			 uses 
+				<a href="Dibi.Strict.html"><span>Dibi\Strict</span></a>
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Dibi.html">Dibi</a>\<a href="namespace-Dibi.Drivers.html">Drivers</a><br>
+		
+
+		<b>Located at</b> <a href="source-Dibi.Drivers.MySqliDriver.php.html#13-499" title="Go to source code">Dibi/Drivers/MySqliDriver.php</a><br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#53-61" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.NotSupportedException.html">Dibi\NotSupportedException</a></code></code><br>Dibi\NotSupportedException<br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="connect" id="_connect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_connect">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#64-132" title="Go to source code">connect</a>( <span>array <var>&amp; $config</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Connects to a database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Connects to a database.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$config</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.Exception.html">Dibi\Exception</a></code></code><br>Dibi\Exception<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_connect">Dibi\Driver::connect()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="disconnect" id="_disconnect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_disconnect">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#135-142" title="Go to source code">disconnect</a>( )</code>
+
+		<div class="description short">
+			
+<p>Disconnects from a database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Disconnects from a database.</p>
+
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Exception.html">Exception</a></code></code><br>Exception<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_disconnect">Dibi\Driver::disconnect()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="query" id="_query">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Dibi.ResultDriver.html">Dibi\ResultDriver</a></code>|null
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_query">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#145-161" title="Go to source code">query</a>( <span>string <var>$sql</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Executes the SQL query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Executes the SQL query.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sql</var></dt>
+					<dd>statement.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Dibi.ResultDriver.html">Dibi\ResultDriver</a></code>|null</code><br>Dibi\ResultDriver|NULL<br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.DriverException.html">Dibi\DriverException</a></code></code><br>Dibi\DriverException<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_query">Dibi\Driver::query()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createException" id="_createException">
+
+		<td class="attributes"><code>
+			 public static
+			<code><a href="Dibi.DriverException.html">Dibi\DriverException</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createException">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#164-181" title="Go to source code">createException</a>( <span> <var>$message</var></span>, <span> <var>$code</var></span>, <span> <var>$sql</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Dibi.DriverException.html">Dibi\DriverException</a></code></code><br>Dibi\DriverException<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInfo" id="_getInfo">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInfo">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#184-200" title="Go to source code">getInfo</a>( )</code>
+
+		<div class="description short">
+			
+<p>Retrieves information about the most recently executed query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retrieves information about the most recently executed query.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>array<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAffectedRows" id="_getAffectedRows">
+
+		<td class="attributes"><code>
+			 public 
+			integer|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAffectedRows">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#203-210" title="Go to source code">getAffectedRows</a>( )</code>
+
+		<div class="description short">
+			
+<p>Gets the number of affected rows by the last INSERT, UPDATE or DELETE
+query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Gets the number of affected rows by the last INSERT, UPDATE or DELETE
+query.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer|false</code><br>number of rows or FALSE on error<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_getAffectedRows">Dibi\Driver::getAffectedRows()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getInsertId" id="_getInsertId">
+
+		<td class="attributes"><code>
+			 public 
+			integer|false
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getInsertId">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#213-220" title="Go to source code">getInsertId</a>( <span> <var>$sequence</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Retrieves the ID generated for an AUTO_INCREMENT column by the previous
+INSERT query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Retrieves the ID generated for an AUTO_INCREMENT column by the previous
+INSERT query.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer|false</code><br>int on success or FALSE on failure<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_getInsertId">Dibi\Driver::getInsertId()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="begin" id="_begin">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_begin">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#223-232" title="Go to source code">begin</a>( <span>string <var>$savepoint</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Begins a transaction (if supported).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Begins a transaction (if supported).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$savepoint</var></dt>
+					<dd>savepoint name</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.DriverException.html">Dibi\DriverException</a></code></code><br>Dibi\DriverException<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_begin">Dibi\Driver::begin()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="commit" id="_commit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_commit">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#235-244" title="Go to source code">commit</a>( <span>string <var>$savepoint</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Commits statements in a transaction.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Commits statements in a transaction.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$savepoint</var></dt>
+					<dd>savepoint name</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.DriverException.html">Dibi\DriverException</a></code></code><br>Dibi\DriverException<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_commit">Dibi\Driver::commit()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="rollback" id="_rollback">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_rollback">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#247-256" title="Go to source code">rollback</a>( <span>string <var>$savepoint</var> = <span class="php-keyword1">NULL</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Rollback changes in a transaction.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Rollback changes in a transaction.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$savepoint</var></dt>
+					<dd>savepoint name</dd>
+				</dl></div>
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.DriverException.html">Dibi\DriverException</a></code></code><br>Dibi\DriverException<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_rollback">Dibi\Driver::rollback()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResource" id="_getResource">
+
+		<td class="attributes"><code>
+			 public 
+			mysqli
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResource">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#259-266" title="Go to source code">getResource</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the connection resource.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the connection resource.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mysqli</code><br>mysqli<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_getResource">Dibi\Driver::getResource()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getReflector" id="_getReflector">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Dibi.Reflector.html">Dibi\Reflector</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getReflector">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#269-276" title="Go to source code">getReflector</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the connection reflector.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the connection reflector.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Dibi.Reflector.html">Dibi\Reflector</a></code></code><br>Dibi\Reflector<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_getReflector">Dibi\Driver::getReflector()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createResultDriver" id="_createResultDriver">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="Dibi.ResultDriver.html">Dibi\ResultDriver</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createResultDriver">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#279-289" title="Go to source code">createResultDriver</a>( <span>mysqli_result <var>$resource</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Result set driver factory.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Result set driver factory.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resource</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="Dibi.ResultDriver.html">Dibi\ResultDriver</a></code></code><br>Dibi\ResultDriver<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeText" id="_escapeText">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeText">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#295-303" title="Go to source code">escapeText</a>( <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Encodes data for use in a SQL statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Encodes data for use in a SQL statement.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd>value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>encoded value<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_escapeText">Dibi\Driver::escapeText()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeBinary" id="_escapeBinary">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeBinary">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#306-309" title="Go to source code">escapeBinary</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_escapeBinary">Dibi\Driver::escapeBinary()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeIdentifier" id="_escapeIdentifier">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeIdentifier">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#312-315" title="Go to source code">escapeIdentifier</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_escapeIdentifier">Dibi\Driver::escapeIdentifier()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeBool" id="_escapeBool">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeBool">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#318-321" title="Go to source code">escapeBool</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_escapeBool">Dibi\Driver::escapeBool()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeDate" id="_escapeDate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeDate">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#324-330" title="Go to source code">escapeDate</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_escapeDate">Dibi\Driver::escapeDate()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeDateTime" id="_escapeDateTime">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeDateTime">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#333-339" title="Go to source code">escapeDateTime</a>( <span> <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_escapeDateTime">Dibi\Driver::escapeDateTime()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escapeLike" id="_escapeLike">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escapeLike">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#342-352" title="Go to source code">escapeLike</a>( <span>string <var>$value</var></span>, <span>integer <var>$pos</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Encodes string for use in a LIKE statement.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Encodes string for use in a LIKE statement.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+					<dt><var>$pos</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>string<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_escapeLike">Dibi\Driver::escapeLike()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unescapeBinary" id="_unescapeBinary">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unescapeBinary">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#355-363" title="Go to source code">unescapeBinary</a>( <span>string <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Decodes data from result set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Decodes data from result set.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$value</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>string<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.ResultDriver.html#_unescapeBinary">Dibi\ResultDriver::unescapeBinary()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escape" id="_escape" class="deprecated">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escape">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#366-371" title="Go to source code">escape</a>( <span> <var>$value</var></span>, <span> <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+				<h4>Deprecated</h4>
+				<div class="list">
+				</div>
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="applyLimit" id="_applyLimit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_applyLimit">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#374-388" title="Go to source code">applyLimit</a>( <span> <var>&amp; $sql</var></span>, <span> <var>$limit</var></span>, <span> <var>$offset</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Injects LIMIT/OFFSET to the SQL query.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Injects LIMIT/OFFSET to the SQL query.</p>
+
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.Driver.html#_applyLimit">Dibi\Driver::applyLimit()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#394-401" title="Go to source code">__destruct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Automatically frees the resources allocated for this result set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Automatically frees the resources allocated for this result set.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getRowCount" id="_getRowCount">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getRowCount">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#404-414" title="Go to source code">getRowCount</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the number of rows in a result set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the number of rows in a result set.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>int<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.ResultDriver.html#_getRowCount">Dibi\ResultDriver::getRowCount()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="fetch" id="_fetch">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_fetch">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#417-425" title="Go to source code">fetch</a>( <span>boolean <var>$assoc</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fetches the row at current position and moves the internal cursor to the next
+position.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fetches the row at current position and moves the internal cursor to the next
+position.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$assoc</var></dt>
+					<dd>for associative array, FALSE for numeric</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>array on success, nonarray if no next record<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="seek" id="_seek">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_seek">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#428-440" title="Go to source code">seek</a>( <span>integer <var>$row</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Moves cursor position without fetching row.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Moves cursor position without fetching row.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$row</var></dt>
+					<dd>0-based cursor pos to seek to</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br>TRUE on success, FALSE if unable to seek to specified record<br>
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="Dibi.Exception.html">Dibi\Exception</a></code></code><br>Dibi\Exception<br>
+				</div>
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.ResultDriver.html#_seek">Dibi\ResultDriver::seek()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="free" id="_free">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_free">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#443-451" title="Go to source code">free</a>( )</code>
+
+		<div class="description short">
+			
+<p>Frees the resources allocated for this result set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Frees the resources allocated for this result set.</p>
+
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.ResultDriver.html#_free">Dibi\ResultDriver::free()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResultColumns" id="_getResultColumns">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResultColumns">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#454-486" title="Go to source code">getResultColumns</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns metadata for all columns in a result set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns metadata for all columns in a result set.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>array<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.ResultDriver.html#_getResultColumns">Dibi\ResultDriver::getResultColumns()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getResultResource" id="_getResultResource">
+
+		<td class="attributes"><code>
+			 public 
+			mysqli_result
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getResultResource">#</a>
+		<code><a href="source-Dibi.Drivers.MySqliDriver.php.html#489-497" title="Go to source code">getResultResource</a>( )</code>
+
+		<div class="description short">
+			
+<p>Returns the result set resource.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the result set resource.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>mysqli_result</code><br>mysqli_result<br>
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="Dibi.ResultDriver.html#_getResultResource">Dibi\ResultDriver::getResultResource()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+	<table class="summary used">
+	<caption>Methods used from <a href="Dibi.Strict.html#methods">Dibi\Strict</a></caption>
+	<tr>
+		<td><code>
+			<a href="Dibi.Strict.html#___call">__call()</a>, 
+			<a href="Dibi.Strict.html#___callStatic">__callStatic()</a>, 
+			<a href="Dibi.Strict.html#___get">__get()</a>, 
+			<a href="Dibi.Strict.html#___isset">__isset()</a>, 
+			<a href="Dibi.Strict.html#___set">__set()</a>, 
+			<a href="Dibi.Strict.html#___unset">__unset()</a>, 
+			<a href="Dibi.Strict.html#_extensionMethod">extensionMethod()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+	<table class="summary constants" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="ERROR_ACCESS_DENIED" id="ERROR_ACCESS_DENIED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Drivers.MySqliDriver.php.html#36" title="Go to source code"><b>ERROR_ACCESS_DENIED</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#ERROR_ACCESS_DENIED" class="anchor">#</a><code><span class="php-num">1045</span></code></div></td>
+	</tr>
+	<tr data-order="ERROR_DUPLICATE_ENTRY" id="ERROR_DUPLICATE_ENTRY">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Drivers.MySqliDriver.php.html#37" title="Go to source code"><b>ERROR_DUPLICATE_ENTRY</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#ERROR_DUPLICATE_ENTRY" class="anchor">#</a><code><span class="php-num">1062</span></code></div></td>
+	</tr>
+	<tr data-order="ERROR_DATA_TRUNCATED" id="ERROR_DATA_TRUNCATED">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name">
+			<code>
+				<a href="source-Dibi.Drivers.MySqliDriver.php.html#38" title="Go to source code"><b>ERROR_DATA_TRUNCATED</b></a>
+			</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#ERROR_DATA_TRUNCATED" class="anchor">#</a><code><span class="php-num">1265</span></code></div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Dibi 3.0.6 API documentation API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+<script src="resources/combined.js?1765913165"></script>
+<script src="elementlist.js?1496387304"></script>
+</body>
+</html>
