@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1bbf2a16-5ed3-4f70-8411-9a74f7b7bb46" name="Default" comment="Averages temperature">
+    <list default="true" id="1bbf2a16-5ed3-4f70-8411-9a74f7b7bb46" name="Default" comment="Test">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/dbconnect.php" afterPath="$PROJECT_DIR$/php/dbconnect.php" />
     </list>
     <ignored path="Weby.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,7 +24,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -32,6 +32,16 @@
               <folding>
                 <marker date="1475606229000" expanded="true" signature="114:160" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbconnect.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dbconnect.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/dbconnect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="44" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="44" />
+            <state relative-caret-position="135">
+              <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -82,6 +92,7 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/php/temperature.php" />
         <option value="$PROJECT_DIR$/php/dbconnect.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -230,7 +241,7 @@
       <workItem from="1475587839927" duration="15000" />
       <workItem from="1475587950850" duration="2210000" />
       <workItem from="1475601812722" duration="1492000" />
-      <workItem from="1475603443466" duration="3298000" />
+      <workItem from="1475603443466" duration="3356000" />
     </task>
     <task id="LOCAL-00001" summary="Úprava configu">
       <created>1475602936401</created>
@@ -260,11 +271,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475606351019</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Test">
+      <created>1475607340987</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1475607340987</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7015000" />
+    <option name="totallyTimeSpent" value="7073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-280" width="1920" height="1080" extended-state="0" />
@@ -308,7 +326,8 @@
     <MESSAGE value="Přejmenování souborů" />
     <MESSAGE value="Print all functions" />
     <MESSAGE value="Averages temperature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Averages temperature" />
+    <MESSAGE value="Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -363,14 +382,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.php" />
     <entry file="file://$PROJECT_DIR$/php/teplota.php" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -395,16 +406,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
-          <folding>
-            <marker date="1475606229000" expanded="true" signature="114:160" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/temperature.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
@@ -419,9 +420,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/dbconnect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="44" />
+        <state relative-caret-position="135">
+          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="74" selection-start-line="21" selection-start-column="74" selection-end-line="21" selection-end-column="74" />
+          <folding>
+            <marker date="1475606229000" expanded="true" signature="114:160" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
