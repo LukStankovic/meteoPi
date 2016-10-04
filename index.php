@@ -1,5 +1,7 @@
 <?php
     include_once 'php/config.php';
+
+    $temp = new temperature();
 ?>
 <!doctype html>
 <html lang="cs">
@@ -21,15 +23,15 @@
 
     <h2>Teploty po 15 minutách</h2>
     <ul>
-    <?php foreach($all as $i => $row){
-        $date = $row["datum"];
-        $temp = $row["teplota"];
-        ?>
-        <li><?php echo date("j. n. Y H:i",strtotime($date))." - $temp";?></li>
+    <?php for($i = 0; $i < $temp->countRows(); $i++){ ?>
+
+        <li><?php echo $temp->dateFormat($temp->getDate($i)).": <strong>".$temp->getTemperature($i)."</strong>"?></li>
+
         <?php
-            if( date("j",strtotime($date)) != date("j",strtotime($all[$i+1]["datum"])) )
+            if($temp->newDay($i))
                 echo "<hr>";
         ?>
+
     <?php } ?>
     </ul>
 </body>

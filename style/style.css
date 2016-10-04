@@ -1,4 +1,8 @@
 body {
-  color: #000; }
+  color: #000;
+  line-height: 13px; }
+
+li {
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=style.css.map */
