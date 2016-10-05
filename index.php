@@ -26,14 +26,14 @@
     <ul>
         <li style="color: #CC2222;">Denní nejvyšší teplota: <strong><?php echo $maxDay["temperature"]. "°C v ".$maxDay["date"];?></strong></li>
         <li style="color: #006aeb">Denní nejnižší teplota: <strong><?php echo $minDay["temperature"]. "°C v ".$minDay["date"]; ?></strong></li>
-        <li>Průměrná denní teplota: <strong><?php echo $temp->averageTotalTemperature();?></strong></li>
+        <li>Průměrná denní teplota: <strong><?php echo $temp->averageDayTemperature();?></strong></li>
     </ul>
     <hr>
     <h2>Celkové statistiky</h2>
     <ul>
         <li style="color: #CC2222;">Celková nejvyšší teplota: <strong><?php echo $maxTotal["temperature"]. "°C dne ". $temp->dateFormat($maxTotal["date"]); ?></strong></li>
         <li style="color: #006aeb">Celková nejnižší teplota: <strong><?php echo $minTotal["temperature"]. "°C dne ". $temp->dateFormat($minTotal["date"]); ?></strong></li>
-        <li>Průměrná celková teplota: <strong><?php echo $temp->averageDayTemperature();?></strong></li>
+        <li>Průměrná celková teplota: <strong><?php echo $temp->averageTotalTemperature();?></strong></li>
     </ul>
 
     <h2>Teploty po 15 minutách</h2>
