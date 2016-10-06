@@ -25,6 +25,18 @@
 
     <?php include_once "nav.php"; ?>
 
+    <div class="obal">
+        <div class="g-radek">
+            <div class="sl-6">
+            qeqwe
+            </div>
+            <div class="sl-6">
+qeqwe
+            </div>
+        </div>
+    </div>
+
+
     <h2>Denní statistiky</h2>
     <ul>
         <li style="color: #CC2222;">Denní nejvyšší teplota: <strong><?php echo $maxDay["temperature"]. "°C v ".$maxDay["date"];?></strong></li>
