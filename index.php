@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="style/style.css" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=greek-ext" rel="stylesheet">
-    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>-->
 </head>
 <body id="dashboard">
 
@@ -53,5 +52,26 @@
 
     <?php } ?>
     </ul>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        $("document").ready(function () {
+
+            var show = 0;
+
+            $(".mobile--btn").click(function () {
+
+                if(show == 0) {
+                    $("header nav ul").slideDown();
+                    show = 1;
+                }
+                else {
+                    $("header nav ul").slideUp();
+                    show = 0;
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>
