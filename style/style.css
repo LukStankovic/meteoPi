@@ -305,7 +305,8 @@ body {
 header {
   width: 100%;
   min-height: 50px;
-  background: #c61931; }
+  background: #c61931;
+  margin-bottom: 10px; }
 
 nav ul {
   margin: 0;
@@ -353,5 +354,23 @@ nav ul li {
       width: 100%; }
     nav ul li:last-child a {
       border-bottom: 0px; } }
+.box {
+  width: 100%;
+  min-height: 150px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  padding: 20px 0px;
+  box-sizing: border-box;
+  border-radius: 3px; }
+
+.box__header {
+  font-size: 17px; }
+
+.box__data .box__temp {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 300; }
 
 /*# sourceMappingURL=style.css.map */

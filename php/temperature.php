@@ -62,6 +62,37 @@ class temperature{
             return false;
     }
 
+    public function actualTemperature(){
+        return $this->getTemperature(0);
+    }
+
+    public function actualTemperatureTime(){
+        return $this->timeFormat($this->getDate(0));
+    }
+
+    public function timeAgo($newer_time,$older_time){
+
+        $periods = array("sek", "min", "h", "d", "t", "m", "r");
+
+        $lengths = array("60","60","24","7","4.35","12");
+
+        if(!is_int($older_time))
+            $older_time = strtotime($older_time);
+        if(!is_int($newer_time))
+            $newer_time = strtotime($newer_time);
+
+        $difference = $older_time - $newer_time;
+
+        $difference = round($difference);
+
+        for($j = 0; $difference >= $lengths[$j] && $j < count($lengths)-1; $j++) {
+            $difference /= $lengths[$j];
+        }
+
+
+        return round($difference)." ".$periods[$j];
+    }
+
     public function averageTotalTemperature(){
         $result = dibi::query('SELECT avg(teplota) as countrows FROM teplota');
         return $result->fetchSingle();
@@ -125,5 +156,24 @@ class temperature{
         $result = dibi::query('SELECT teplota as temperature, datum as date FROM teplota WHERE teplota = (SELECT min(teplota) FROM teplota ) ');
 
         return $result->fetchAll()[0];
+    }
+
+    public function boxColor($temp){
+
+        if($temp < 18)
+            $color = "#3D8EB9";
+        elseif ($temp >= 18 && $temp < 20)
+            $color = "#83D6DE";
+        elseif ($temp >= 20 && $temp < 23)
+            $color = "#F29B34";
+        elseif ($temp >= 23 && $temp < 25)
+            $color = "#FF7416";
+        elseif ($temp >= 25)
+            $color = "#F04903";
+        else
+            $color = "#7f8c8d";
+
+
+        return $color;
     }
 }
