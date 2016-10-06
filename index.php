@@ -30,7 +30,7 @@
                             <?php echo $temp->actualTemperature(); ?> °C
                         </div>
                         <div class="box__date">
-                            <?php echo $temp->dateFormat($maxTotal["date"]) ?>, před <?php echo $temp->timeAgo($temp->actualTemperatureTime(),time()); ?>
+                            <?php echo $temp->actualTemperatureTime(); ?>, před <?php echo $temp->timeAgo($temp->actualTemperatureTime(),time()); ?>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@
             <div class="sl-4">
                 <div class="box temp-now" style="background: <?php echo $temp->boxColor($minTotal["temperature"]);?>">
                     <div class="box__header">
-                        <i class="fa fa-arrow-up" aria-hidden="true"></i> Celková nejvyšší teplota
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i> Celková nejnižší teplota
                     </div>
                     <div class="box__data">
                         <div class="box__temp">
