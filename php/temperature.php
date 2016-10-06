@@ -102,7 +102,7 @@ class temperature{
 
         $total = 0;
 
-        for($i = 0; $i < $this->countRows(); $i++) {
+        for($i = 1; $i < $this->countRows(); $i++) {
 
             $total += $this->getTemperature($i);
 
