@@ -18,6 +18,19 @@ body{
   font-family: 'Open Sans', sans-serif;
 }
 
+h1{
+  font-weight: 600;
+  color: $cervena-tm;
+}
+h2{
+  font-weight: 400;
+  color: $cervena;
+}
+h3{
+  font-weight: 300;
+  color: $cervena;
+}
+
 // NAVIGACE
 // ========
 
@@ -25,7 +38,7 @@ header{
   width: 100%;
   min-height: 50px;
   background: $cervena;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 nav ul{

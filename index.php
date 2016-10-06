@@ -26,6 +26,8 @@
     <?php include_once "nav.php"; ?>
 
     <div class="obal">
+        <h2>Denní statistiky</h2>
+
         <div class="g-radek">
             <div class="sl-3">
                 <div class="box temp-now" style="background: <?php echo $temp->boxColor($temp->actualTemperature());?>">
@@ -90,27 +92,29 @@
         </div>
     </div>
 
+    <div class="obal">
 
-    <h2>Celkové statistiky</h2>
-    <ul>
-        <li style="color: #CC2222;">Celková nejvyšší teplota: <strong><?php echo $maxTotal["temperature"]. "°C dne ". $temp->dateFormat($maxTotal["date"]); ?></strong></li>
-        <li style="color: #006aeb">Celková nejnižší teplota: <strong><?php echo $minTotal["temperature"]. "°C dne ". $temp->dateFormat($minTotal["date"]); ?></strong></li>
-        <li>Průměrná celková teplota: <strong><?php echo $temp->averageTotalTemperature();?></strong></li>
-    </ul>
+        <h2>Celkové statistiky</h2>
+        <ul>
+            <li style="color: #CC2222;">Celková nejvyšší teplota: <strong><?php echo $maxTotal["temperature"]. "°C dne ". $temp->dateFormat($maxTotal["date"]); ?></strong></li>
+            <li style="color: #006aeb">Celková nejnižší teplota: <strong><?php echo $minTotal["temperature"]. "°C dne ". $temp->dateFormat($minTotal["date"]); ?></strong></li>
+            <li>Průměrná celková teplota: <strong><?php echo $temp->averageTotalTemperature();?></strong></li>
+        </ul>
 
-    <h2>Teploty po 15 minutách</h2>
-    <ul>
-    <?php for($i = 0; $i < $temp->countRows(); $i++){ ?>
+        <h2>Teploty po 15 minutách</h2>
+        <ul>
+        <?php for($i = 0; $i < $temp->countRows(); $i++){ ?>
 
-        <li><?php echo $temp->dateFormat($temp->getDate($i)).": <strong>".$temp->getTemperature($i)."</strong>"?></li>
+            <li><?php echo $temp->dateFormat($temp->getDate($i)).": <strong>".$temp->getTemperature($i)."</strong>"?></li>
 
-        <?php
-            if($temp->newDay($i))
-                echo "<hr>";
-        ?>
+            <?php
+                if($temp->newDay($i))
+                    echo "<hr>";
+            ?>
 
-    <?php } ?>
-    </ul>
+        <?php } ?>
+        </ul>
+     </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>

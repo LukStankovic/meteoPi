@@ -302,11 +302,23 @@ body {
   padding: 0;
   font-family: 'Open Sans', sans-serif; }
 
+h1 {
+  font-weight: 600;
+  color: #b1162c; }
+
+h2 {
+  font-weight: 400;
+  color: #c61931; }
+
+h3 {
+  font-weight: 300;
+  color: #c61931; }
+
 header {
   width: 100%;
   min-height: 50px;
   background: #c61931;
-  margin-bottom: 10px; }
+  margin-bottom: 20px; }
 
 nav ul {
   margin: 0;
