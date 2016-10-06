@@ -72,7 +72,7 @@ class temperature{
 
     public function timeAgo($newer_time,$older_time){
 
-        $periods = array("sek", "min", "h", "d", "t", "m", "r");
+        $periods = array("sek.", "min.", "hod.", "d.", "t.", "měs.", "r.");
 
         $lengths = array("60","60","24","7","4.35","12");
 

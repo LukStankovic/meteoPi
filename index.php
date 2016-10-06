@@ -30,7 +30,7 @@
                             <?php echo $temp->actualTemperature(); ?> °C
                         </div>
                         <div class="box__date">
-                            <?php echo $temp->actualTemperatureTime(); ?> (před <?php echo $temp->timeAgo($temp->actualTemperatureTime(),time()); ?>)
+                            <?php echo $temp->dateFormat($maxTotal["date"]) ?>, před <?php echo $temp->timeAgo($temp->actualTemperatureTime(),time()); ?>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@
                             <?php echo $maxDay["temperature"]; ?> °C
                         </div>
                         <div class="box__date">
-                            <?php echo $maxDay["date"]; ?> (před <?php echo $temp->timeAgo($maxDay["date"],time()); ?>)
+                            <?php echo $maxDay["date"]; ?>, před <?php echo $temp->timeAgo($maxDay["date"],time()); ?>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                             <?php echo $minDay["temperature"]; ?> °C
                     </div>
                         <div class="box__date">
-                            <?php echo $minDay["date"]; ?> (před <?php echo $temp->timeAgo($minDay["date"],time()); ?>)
+                            <?php echo $minDay["date"]; ?>, před <?php echo $temp->timeAgo($minDay["date"],time()); ?>
                         </div>
                     </div>
                 </div>
@@ -81,30 +81,58 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="obal">
 
         <h2>Celkové statistiky</h2>
-        <ul>
-            <li style="color: #CC2222;">Celková nejvyšší teplota: <strong><?php echo $maxTotal["temperature"]. "°C dne ". $temp->dateFormat($maxTotal["date"]); ?></strong></li>
-            <li style="color: #006aeb">Celková nejnižší teplota: <strong><?php echo $minTotal["temperature"]. "°C dne ". $temp->dateFormat($minTotal["date"]); ?></strong></li>
-            <li>Průměrná celková teplota: <strong><?php echo $temp->averageTotalTemperature();?></strong></li>
-        </ul>
+        <div class="g-radek">
+            <div class="sl-4">
+                <div class="box temp-now" style="background: <?php echo $temp->boxColor($maxTotal["temperature"]);?>">
+                    <div class="box__header">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i> Celková nejvyšší teplota
+                    </div>
+                    <div class="box__data">
+                        <div class="box__temp">
+                            <?php echo $maxTotal["temperature"]; ?> °C
+                        </div>
+                        <div class="box__date">
+                            <?php echo $temp->dateFormat($maxTotal["date"]) ?>, před <?php echo $temp->timeAgo($maxTotal["date"],time()); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sl-4">
+                <div class="box temp-now" style="background: <?php echo $temp->boxColor($minTotal["temperature"]);?>">
+                    <div class="box__header">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i> Celková nejvyšší teplota
+                    </div>
+                    <div class="box__data">
+                        <div class="box__temp">
+                            <?php echo $minTotal["temperature"]; ?> °C
+                        </div>
+                        <div class="box__date">
+                            <?php echo $temp->dateFormat($minTotal["date"]) ?>, před <?php echo $temp->timeAgo($minTotal["date"],time()); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <h2>Teploty po 15 minutách</h2>
-        <ul>
-        <?php for($i = 0; $i < $temp->countRows(); $i++){ ?>
+            <div class="sl-4">
+                <div class="box avg-temp-today" style="background: <?php echo $temp->boxColor($temp->averageTotalTemperature());?>">
+                    <div class="box__header">
+                        <i class="fa fa-tasks" aria-hidden="true"></i> Celková průměrná teplota
+                    </div>
+                    <div class="box__data">
+                        <div class="box__temp">
+                            <?php echo round($temp->averageTotalTemperature(),3); ?> °C
+                        </div>
+                        <div class="box__date">
+                            <?php echo date("j. n."); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <li><?php echo $temp->dateFormat($temp->getDate($i)).": <strong>".$temp->getTemperature($i)."</strong>"?></li>
-
-            <?php
-                if($temp->newDay($i))
-                    echo "<hr>";
-            ?>
-
-        <?php } ?>
-        </ul>
      </div>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
