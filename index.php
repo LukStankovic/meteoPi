@@ -143,7 +143,7 @@
         <h2>Spotřeba</h2>
         <div class="g-radek">
             <div class="sl-4">
-                <div class="box temp-now" style="background: <?php echo $temp->boxColor($maxTotal["temperature"]);?>">
+                <div class="box" style="background: #9E8E5A">
                     <div class="box__header">
                         <i class="fa fa-arrow-up" aria-hidden="true"></i> Spotřebované energie
                     </div>
@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div class="sl-4">
-                <div class="box temp-now" style="background: <?php echo $temp->boxColor($minTotal["temperature"]);?>">
+                <div class="box" style="background: #9E8E5A">
                     <div class="box__header">
                         <i class="fa fa-arrow-up" aria-hidden="true"></i> Cena za provoz od startu
                     </div>
@@ -172,7 +172,7 @@
             </div>
 
             <div class="sl-4">
-                <div class="box avg-temp-today" style="background: <?php echo $temp->boxColor($temp->averageTotalTemperature());?>">
+                <div class="box" style="background: #9E8E5A">
                     <div class="box__header">
                         <i class="fa fa-tasks" aria-hidden="true"></i> Spuštěných hodin
                     </div>
