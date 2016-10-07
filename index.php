@@ -189,6 +189,16 @@
      </div>
 <?php include_once "php/footer.php"; ?>
     <script>
+
+        AmCharts.makeChart( "teplota_od_zacatku_dne", {
+            "type": "serial",
+            "dataLoader": {
+                "url": "todayTemp.php",
+                "format": "json"
+            }
+        } );
+
+        /*
         var chart;
         var chartData = [];
         var chartCursor;
@@ -281,25 +291,9 @@
             chart.write("teplota_od_zacatku_dne");
         });
 
-        // generate some random data, quite different range
         function generateChartData() {
-            var firstDate = new Date();
-            firstDate.setDate(firstDate.getDate() - 500);
 
-            for (var i = 0; i < 500; i++) {
-                // we create date objects here. In your data, you can have date strings
-                // and then set format of your dates using chart.dataDateFormat property,
-                // however when possible, use date objects, as this will speed up chart rendering.
-                var newDate = new Date(firstDate);
-                newDate.setDate(newDate.getDate() + i);
 
-                var visits = Math.round(Math.random() * 40) - 20;
-
-                chartData.push({
-                    date: newDate,
-                    visits: visits
-                });
-            }
         }
 
         // this method is called when chart is first inited as we listen for "dataUpdated" event
@@ -318,7 +312,7 @@
             }
             chart.validateNow();
         }
-
+*/
     </script>
 </body>
 </html>
