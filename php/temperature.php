@@ -38,6 +38,8 @@ class temperature{
         return $this->dates[$i];
     }
 
+
+
     public function countRows(){
         $result = dibi::query('SELECT count(teplota) as countrows FROM teplota');
         return $result->fetchSingle();
