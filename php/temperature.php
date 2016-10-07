@@ -70,7 +70,7 @@ class temperature{
         return $this->timeFormat($this->getDate(0));
     }
 
-    public function timeAgo($newer_time,$older_time){
+    public function timeAgo($older_time,$newer_time){
 
         $periods = array("sek.", "min.", "hod.", "d.", "t.", "měs.", "r.");
 
@@ -81,7 +81,7 @@ class temperature{
         if(!is_int($newer_time))
             $newer_time = strtotime($newer_time);
 
-        $difference = $older_time - $newer_time;
+        $difference = $newer_time - $older_time;
 
         $difference = round($difference);
 
@@ -175,5 +175,26 @@ class temperature{
 
 
         return $color;
+    }
+
+    public function energyConsumption($kwh_cost){
+
+        $startDate = strtotime(end($this->getDates()));
+        $startTime = (strtotime(end($this->getDates())))/3600;
+        $now = (time())/3600;
+
+        $diff = $now - $startTime;
+
+
+        // MAX 10 W
+
+        // HOW MANY WATTS:
+
+        $res["watts"] = 10 * $diff;
+        $res["cost"] = 0.010 * $diff * $kwh_cost;
+        $res["uptime"] = $diff;
+        $res["start_date"] = $startDate;
+
+        return $res;
     }
 }

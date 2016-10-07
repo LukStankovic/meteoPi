@@ -8,6 +8,13 @@
 
     $maxTotal = $temp->maxTotalTemperature();
     $minTotal = $temp->minTotalTemperature();
+
+    $kwh_cost = 3.76;
+
+    $watts = $temp->energyConsumption($kwh_cost)["watts"];
+    $cost = $temp->energyConsumption($kwh_cost)["cost"];
+    $up_time = $temp->energyConsumption($kwh_cost)["uptime"];
+    $start = $temp->energyConsumption($kwh_cost)["start_date"];
 ?>
 
 <?php include_once "php/head.php"; ?>
@@ -127,6 +134,54 @@
                         </div>
                         <div class="box__date">
                             <?php echo date("j. n."); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>Spotřeba</h2>
+        <div class="g-radek">
+            <div class="sl-4">
+                <div class="box temp-now" style="background: <?php echo $temp->boxColor($maxTotal["temperature"]);?>">
+                    <div class="box__header">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i> Spotřebované energie
+                    </div>
+                    <div class="box__data">
+                        <div class="box__temp">
+                            <?php echo round($watts,2); ?> W
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="sl-4">
+                <div class="box temp-now" style="background: <?php echo $temp->boxColor($minTotal["temperature"]);?>">
+                    <div class="box__header">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i> Cena za provoz od startu
+                    </div>
+                    <div class="box__data">
+                        <div class="box__temp">
+                            <?php echo round($cost); ?> Kč
+                        </div>
+                        <div class="box__date">
+                            Při ceně za kWh <?php echo $kwh_cost; ?> Kč
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sl-4">
+                <div class="box avg-temp-today" style="background: <?php echo $temp->boxColor($temp->averageTotalTemperature());?>">
+                    <div class="box__header">
+                        <i class="fa fa-tasks" aria-hidden="true"></i> Spuštěných hodin
+                    </div>
+                    <div class="box__data">
+                        <div class="box__temp">
+                            <?php echo round($up_time) ?> hodin
+                        </div>
+                        <div class="box__date">
+                            od <?php echo date("j. n. Y",$start); ?>
                         </div>
                     </div>
                 </div>
