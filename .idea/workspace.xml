@@ -4,12 +4,10 @@
     <list id="1bbf2a16-5ed3-4f70-8411-9a74f7b7bb46" name="Default" comment="Added amcharts" />
     <list id="7576b171-da3b-4242-b20e-bd31b6e71c58" name="v0.3" comment="Added graph system" />
     <list default="true" id="df29627b-0c60-4827-b4cf-5c2ebe5d411d" name="v0.3.2" comment="- New names of methods&#10;- Detail comments of methods">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/graphData/apiDbConnect.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/graphData/todayTemp.php" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/php/dbconnect.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/footer.php" afterPath="$PROJECT_DIR$/php/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/graphData/apiDbConnect.php" afterPath="$PROJECT_DIR$/php/graphData/apiDbConnect.php" />
     </list>
     <ignored path="Weby.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,21 +46,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todayTemp.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="todayTemp.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/graphData/todayTemp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apiDbConnect.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/php/graphData/apiDbConnect.php">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+            <state relative-caret-position="60">
+              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -116,7 +114,6 @@
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/php/teplota.php" />
         <option value="$PROJECT_DIR$/php/config.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/nav.php" />
         <option value="$PROJECT_DIR$/style/grid/grid.scss" />
         <option value="$PROJECT_DIR$/style/style.scss" />
@@ -130,6 +127,7 @@
         <option value="$PROJECT_DIR$/php/dbconnect.php" />
         <option value="$PROJECT_DIR$/php/graphData/todayTemp.php" />
         <option value="$PROJECT_DIR$/php/graphData/apiDbConnect.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -518,14 +516,21 @@
       <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
       <updated>1475876954756</updated>
-      <workItem from="1475876954805" duration="1175000" />
+      <workItem from="1475876954805" duration="1220000" />
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Create API">
+      <created>1475878164236</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1475878164236</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35195000" />
+    <option name="totallyTimeSpent" value="35240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-280" width="1920" height="1080" extended-state="6" />
@@ -587,7 +592,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Averages temperature" />
     <MESSAGE value="Test" />
     <MESSAGE value="Připojení k databázi" />
     <MESSAGE value="Error in gitignore" />
@@ -612,7 +616,8 @@
     <MESSAGE value="Edit footer.php" />
     <MESSAGE value="Added amcharts" />
     <MESSAGE value="Detailed comments, changed names of methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Detailed comments, changed names of methods" />
+    <MESSAGE value="Create API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create API" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
@@ -886,14 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9d93dfae-16ad-437b-b99c-9bfbe2bef0a8/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1027,18 +1024,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/graphData/todayTemp.php">
+    <entry file="file://$PROJECT_DIR$/php/graphData/apiDbConnect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/graphData/apiDbConnect.php">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        <state relative-caret-position="60">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/graphData/todayTemp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
           <folding />
         </state>
       </provider>
