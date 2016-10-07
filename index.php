@@ -110,7 +110,7 @@
             <div class="sl-4">
                 <div class="box temp-now" style="background: <?php echo $temp->boxColor($minTotal["temperature"]);?>">
                     <div class="box__header">
-                        <i class="fa fa-arrow-up" aria-hidden="true"></i> Celková nejnižší teplota
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i> Celková nejnižší teplota
                     </div>
                     <div class="box__data">
                         <div class="box__temp">
@@ -145,7 +145,7 @@
             <div class="sl-4">
                 <div class="box" style="background: #9E8E5A">
                     <div class="box__header">
-                        <i class="fa fa-arrow-up" aria-hidden="true"></i> Spotřebované energie
+                        <i class="fa fa-plug" aria-hidden="true"></i> Spotřebované energie
                     </div>
                     <div class="box__data">
                         <div class="box__temp">
@@ -158,7 +158,7 @@
             <div class="sl-4">
                 <div class="box" style="background: #9E8E5A">
                     <div class="box__header">
-                        <i class="fa fa-arrow-up" aria-hidden="true"></i> Cena za provoz od startu
+                        <i class="fa fa-money" aria-hidden="true"></i> Cena za provoz od startu
                     </div>
                     <div class="box__data">
                         <div class="box__temp">
@@ -174,7 +174,7 @@
             <div class="sl-4">
                 <div class="box" style="background: #9E8E5A">
                     <div class="box__header">
-                        <i class="fa fa-tasks" aria-hidden="true"></i> Spuštěných hodin
+                        <i class="fa fa-hourglass-half" aria-hidden="true"></i> Spuštěných hodin
                     </div>
                     <div class="box__data">
                         <div class="box__temp">
