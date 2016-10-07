@@ -3,8 +3,17 @@
 class temperature{
 
     private $all;
-    private $temperatures = array();
-    private $dates = array();
+    private $data = array();
+
+    // CONSTRUCTOR
+    // -----------
+    // - getting data from database
+    // - save them to private var $data
+    //          - two dimensional array
+    //          - first dimension is int
+    //              - temperature -> show temperature in °C
+    //              - date -> show date time in human like format
+    //              - unix_timestamp -> show datetime in seconds since  1. 1. 1970
 
     public function __construct(){
         $result = dibi::query('SELECT * FROM teplota ORDER BY datum DESC');
@@ -12,65 +21,212 @@ class temperature{
         $this->all = $result->fetchAll();
 
         foreach ($this->all as $i => $row){
-            $this->temperatures[$i] = $row["teplota"];
-            $this->dates[$i] = $row["datum"];
+            $this->data[$i]["temperature"] = $row["teplota"];
+            $this->data[$i]["date"] = $this->dateTimeFormat($row["datum"]);
+            $this->data[$i]["unix_timestamp"] = strtotime($row["datum"]);
         }
 
     }
 
-    public function getAll(){
-        return $this->all;
-    }
+    // DATE AND TIME FORMATS
+    // =====================
 
-    public function getTemperatures(){
-        return $this->temperatures;
-    }
+        // DATE AND TIME FORMAT
+        // --------------------
+        // - format: 02. 12. 2017 18:25
 
-    public function getDates(){
-        return $this->dates;
-    }
+        public function dateTimeFormat($date){
+            if(is_int($date))
+                return date("j. n. Y H:i",$date);
+            else
+                return date("j. n. Y H:i",strtotime($date));
+        }
 
-    public function getTemperature($i){
-        return $this->temperatures[$i];
-    }
+        // DATE FORMAT
+        // -----------
+        // - format: 02. 12. 2017
 
-    public function getDate($i){
-        return $this->dates[$i];
-    }
+        public function dateFormat($date){
+            if(is_int($date))
+                return date("j. n. Y",$date);
+            else
+                return date("j. n. Y",strtotime($date));
+        }
+
+        // TIME FORMAT
+        // --------------------
+        // - format: 18:25
+
+        public function timeFormat($date){
+            if(is_int($date))
+                return date("H:i",strtotime($date));
+            else
+                return date("H:i",strtotime($date));
+        }
+
+        // TIME FORMAT
+        // --------------------
+        // - format: 30
+
+        public function dayFormat($date){
+            if(is_int($date))
+                return date("j",$date);
+            else
+                return date("j",strtotime($date));
+        }
+
+
+    // GET TEMPERATURE AND DATE
+    // ========================
+
+        // GET ALL DATA
+        // ------------
+        // - returns array of all temperatures with date
+
+        public function getAll(){
+            return $this->data;
+        }
+
+        // GET ONE TEMPERATURE WITH DATE TIME
+        // ----------------------------------
+        // - returns array of all temperatures with date
+
+        public function getOne($i){
+            return $this->data[$i];
+        }
+
+        // GET LATEST (actual) TEMPERATURE WITH DATETIME
+        // ---------------------------------------------
+        // - return array of latest temp
+
+        public function actualTemperature(){
+            return $this->data[0];
+        }
 
 
 
-    public function countRows(){
-        $result = dibi::query('SELECT count(teplota) as countrows FROM teplota');
-        return $result->fetchSingle();
-    }
+    // AVERAGES
+    // ========
+    // - returns averages of rows
 
-    public function dateFormat($date){
-        return date("j. n. Y H:i",strtotime($date));
-    }
+        // AVERAGE TEMPERATURE - TOTAL
+        // ---------------------------
+        // - return float
 
-    public function timeFormat($date){
-        return date("H:i",strtotime($date));
-    }
+        public function averageTotalTemperature(){
+            $result = dibi::query('SELECT avg(teplota) as countrows FROM teplota');
+            return $result->fetchSingle();
+        }
 
-    public function dayFormat($date){
-        return date("j",strtotime($date));
-    }
+        // AVERAGE TEMPERATURE - TODAY
+        // -------------------------
+        // - return float
 
-    public function newDay($i){
-        if($this->dayFormat($this->getDate($i)) != $this->dayFormat($this->getDate($i+1)))
-            return true;
-        else
-            return false;
-    }
+        public function averageTodayTemperature(){
 
-    public function actualTemperature(){
-        return $this->getTemperature(0);
-    }
+            $total = 0;
 
-    public function actualTemperatureTime(){
-        return $this->timeFormat($this->getDate(0));
-    }
+            for($i = 1; $i < $this->countAll(); $i++) {
+
+                $total += $this->getOne($i)["temperature"];
+
+                if ($this->newDay($i))
+                    break;
+            }
+
+            return $total/$i;
+        }
+
+        // AVERAGE TEMPERATURE - DAY
+        // -------------------
+        // - returns avg temperature of day
+
+
+
+    // MAXIMUM AND MINIMUM
+    // ===================
+    // - returns maximum and minimum
+
+
+        // MAX TODAY TEMPERATURE
+        // ---------------------
+
+        public function maxTodayTemperature(){
+            $max["temperature"] = -1000;
+
+            foreach ($this->getAll() as $i => $item){
+
+                if($item["temperature"] > $max["temperature"]) {
+                    $max["temperature"] = $item["temperature"];
+                    $max["date"] = $item["date"];
+                    $max["unix_timestamp"] = $item["unix_timestamp"];
+                }
+
+                if ($this->newDay($i))
+                    break;
+
+            }
+
+            return $max;
+        }
+
+        // MIN TODAY TEMPERATURE
+        // ---------------------
+
+        public function minTodayTemperature(){
+            $min["temperature"] = 1000;
+            foreach ($this->getAll() as $key => $item){
+
+                if($item["temperature"] < $min["temperature"]) {
+                    $min["temperature"] = $item["temperature"];
+                    $min["date"] = $item["date"];
+                    $min["unix_timestamp"] = $item["unix_timestamp"];
+                }
+
+                if ($this->newDay($key))
+                    break;
+
+            }
+
+            return $min;
+        }
+
+        // MAX DAY TEMPERATURE
+        // -------------------
+        // - returns max temperature of day
+
+        /* NOTHING TO SEE HERE... */
+
+        // MIN DAY TEMPERATURE
+        // -------------------
+        // - returns min temperature of day
+
+        /* NOTHING TO SEE HERE... */
+
+    // MAX TOTAL TEMPERATURE
+        // ---------------------
+
+        public function maxTotalTemperature(){
+            $result = dibi::query('SELECT teplota as temperature, datum as date FROM teplota WHERE teplota = (SELECT max(teplota) FROM teplota ) ');
+
+            return $result->fetchAll()[0];
+
+        }
+
+        // MIN TOTAL TEMPERATURE
+        // ---------------------
+
+        public function minTotalTemperature(){
+            $result = dibi::query('SELECT teplota as temperature, datum as date FROM teplota WHERE teplota = (SELECT min(teplota) FROM teplota ) ');
+
+            return $result->fetchAll()[0];
+        }
+
+
+
+    // TIME AGO
+    // =========
+    // - return string
 
     public function timeAgo($older_time,$newer_time){
 
@@ -95,70 +251,31 @@ class temperature{
         return round($difference)." ".$periods[$j];
     }
 
-    public function averageTotalTemperature(){
-        $result = dibi::query('SELECT avg(teplota) as countrows FROM teplota');
+    // COUNT ALL
+    // ---------
+    // - return int
+
+    public function countAll(){
+        $result = dibi::query('SELECT count(teplota) as countrows FROM teplota');
         return $result->fetchSingle();
     }
 
-    public function averageDayTemperature(){
+    // CHECK IF IS NEW DAY AFTER $i DATE
+    // ---------------------------------
+    // - return true if is older row previous day
 
-        $total = 0;
-
-        for($i = 1; $i < $this->countRows(); $i++) {
-
-            $total += $this->getTemperature($i);
-
-            if ($this->newDay($i))
-                break;
-        }
-
-        return $total/$i;
+    public function newDay($i)
+    {
+        if ($this->dayFormat($this->getOne($i)["unix_timestamp"]) != $this->dayFormat($this->getOne($i + 1)["unix_timestamp"]))
+            return true;
+        else
+            return false;
     }
 
-    public function maxDayTemperature(){
-        $max["temperature"] = -1000;
-        for($i = 0; $i < $this->countRows(); $i++) {
 
-            if($this->getTemperature($i) > $max["temperature"]) {
-                $max["temperature"] = $this->getTemperature($i);
-                $max["date"] = $this->timeFormat($this->getDate($i));
-            }
-
-            if ($this->newDay($i))
-                break;
-        }
-
-        return $max;
-    }
-
-    public function minDayTemperature(){
-        $min["temperature"] = 1000;
-        for($i = 0; $i < $this->countRows(); $i++) {
-
-            if($this->getTemperature($i) < $min["temperature"]) {
-                $min["temperature"] = $this->getTemperature($i);
-                $min["date"] = $this->timeFormat($this->getDate($i));
-            }
-
-            if ($this->newDay($i))
-                break;
-        }
-
-        return $min;
-    }
-
-    public function maxTotalTemperature(){
-        $result = dibi::query('SELECT teplota as temperature, datum as date FROM teplota WHERE teplota = (SELECT max(teplota) FROM teplota ) ');
-
-        return $result->fetchAll()[0];
-
-    }
-
-    public function minTotalTemperature(){
-        $result = dibi::query('SELECT teplota as temperature, datum as date FROM teplota WHERE teplota = (SELECT min(teplota) FROM teplota ) ');
-
-        return $result->fetchAll()[0];
-    }
+    // BOX COLOR
+    // ---------
+    // - return color in hexadecimal for temp
 
     public function boxColor($temp){
 
@@ -179,24 +296,30 @@ class temperature{
         return $color;
     }
 
-    public function energyConsumption($kwh_cost){
+    // ENERGY
+    // ======
 
-        $startDate = strtotime(end($this->getDates()));
-        $startTime = (strtotime(end($this->getDates())))/3600;
-        $now = (time())/3600;
+        // ENERGY CONSUMPTION OF PI
+        // ------------------------
 
-        $diff = $now - $startTime;
+        public function energyConsumption($kwh_cost){
+
+            $startDate = $this->getOne($this->countAll()-1)["unix_timestamp"];
+            $startTime = $this->getOne($this->countAll()-1)["unix_timestamp"]/3600;
+            $now = (time())/3600;
+
+            $diff = $now - $startTime;
 
 
-        // MAX 10 W
+            // MAX 10 W
 
-        // HOW MANY WATTS:
+            // HOW MANY WATTS:
 
-        $res["watts"] = 10 * $diff;
-        $res["cost"] = 0.010 * $diff * $kwh_cost;
-        $res["uptime"] = $diff;
-        $res["start_date"] = $startDate;
+            $res["watts"] = 10 * $diff;
+            $res["cost"] = 0.010 * $diff * $kwh_cost;
+            $res["uptime"] = $diff;
+            $res["start_date"] = $this->dateFormat($startDate);
 
-        return $res;
-    }
+            return $res;
+        }
 }
