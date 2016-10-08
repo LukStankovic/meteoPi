@@ -192,7 +192,7 @@
         var chart = AmCharts.makeChart("teplota_od_zacatku_dne", {
             "type": "serial",
             "dataLoader": {
-                "url": "php/api/temp.php",
+                "url": "api.php?action=alltemp",
                 "format": "json"
             },
             "categoryField": "date",

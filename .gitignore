@@ -3,4 +3,3 @@
 php/dbconnect.php
 .*
 !/.gitignore
-/php/api/apiDbConnect.php
