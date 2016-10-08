@@ -2,8 +2,8 @@
 
 class temperature{
 
-    private $all;
     private $data = array();
+    private $dataReversed = array();
 
     // CONSTRUCTOR
     // -----------
@@ -18,12 +18,19 @@ class temperature{
     public function __construct(){
         $result = dibi::query('SELECT * FROM teplota ORDER BY datum DESC');
 
-        $this->all = $result->fetchAll();
 
-        foreach ($this->all as $i => $row){
+        foreach ($result->fetchAll() as $i => $row){
             $this->data[$i]["temperature"] = $row["teplota"];
             $this->data[$i]["date"] = $this->dateTimeFormat($row["datum"]);
             $this->data[$i]["unix_timestamp"] = strtotime($row["datum"]);
+        }
+
+        $resultRev = dibi::query('SELECT * FROM teplota ORDER BY datum ASC');
+
+        foreach ($resultRev->fetchAll() as $i => $row){
+            $this->dataReversed[$i]["temperature"] = $row["teplota"];
+            $this->dataReversed[$i]["date"] = $this->dateTimeFormat($row["datum"]);
+            $this->dataReversed[$i]["unix_timestamp"] = strtotime($row["datum"]);
         }
 
     }
@@ -53,7 +60,31 @@ class temperature{
                 return date("j. n. Y",strtotime($date));
         }
 
-        // TIME FORMAT
+
+        // DATE FORMAT
+        // -----------
+        // - format: 12
+
+        public function monthFormat($date){
+            if(is_int($date))
+                return date("n",$date);
+            else
+                return date("n",strtotime($date));
+        }
+
+
+        // DATE FORMAT
+        // -----------
+        // - format: 2017
+
+        public function yearFormat($date){
+            if(is_int($date))
+                return date("Y",$date);
+            else
+                return date("Y",strtotime($date));
+        }
+
+    // TIME FORMAT
         // --------------------
         // - format: 18:25
 
@@ -81,13 +112,22 @@ class temperature{
 
         // GET ALL DATA
         // ------------
-        // - returns array of all temperatures with date
+        // - returns array of all temperatures with date - from now
 
         public function getAll(){
             return $this->data;
         }
 
-        // GET ONE TEMPERATURE WITH DATE TIME
+        // GET ALL DATA - REVERSED
+        // -----------------------
+        // - returns array of all temperatures with date - from first row!!!
+
+        public function getAllReversed(){
+            return $this->dataReversed;
+        }
+
+
+    // GET ONE TEMPERATURE WITH DATE TIME
         // ----------------------------------
         // - returns array of all temperatures with date
 
@@ -137,9 +177,82 @@ class temperature{
             return $total/$i;
         }
 
+
+        // AVERAGE TEMPERATURE - ALL DAYS
+        // ------------------------------
+        // - returns avg temperature of all days
+
+
+        public function averageDaysTemperature(){
+
+            $tmp = 0;
+
+            $j = 0;
+            $k = 0;
+            $values = array();
+
+
+            foreach ($this->getAllReversed() as $i => $value){
+
+                $tmp += floatval($value["temperature"]);
+
+                if ($this->newDayReversed($i) && $i != 0){
+
+                    $values[$j]["unix_timestamp"] = $value["unix_timestamp"];
+                    $values[$j]["avgtemp"] = $tmp/$k;
+
+                    $j++;
+                    $tmp = 0;
+                    $k = 0;
+                }
+                $k++;
+
+            }
+
+            return $values;
+        }
+
+    // AVERAGE TEMPERATURE - ALL DAYS FOR ONE YEAR
+    // -------------------------------------------
+    // - returns avg temperature of all days for one year
+
+
+    public function averageDaysTemperatureYear($year){
+
+        $tmp = 0;
+
+        $j = 0;
+        $k = 0;
+        $values = array();
+
+
+        foreach ($this->getAllReversed() as $i => $value){
+
+            if($this->yearFormat($value["unix_timestamp"]) != $year)
+                break;
+
+            $tmp += floatval($value["temperature"]);
+
+
+            if ($this->newDayReversed($i) && $i != 0){
+
+                $values[$j]["unix_timestamp"] = $value["unix_timestamp"];
+                $values[$j]["avgtemp"] = $tmp/$k;
+
+                $j++;
+                $tmp = 0;
+                $k = 0;
+            }
+            $k++;
+        }
+
+        return $values;
+    }
+
         // AVERAGE TEMPERATURE - DAY
         // -------------------
         // - returns avg temperature of day
+
 
 
 
@@ -260,17 +373,59 @@ class temperature{
         return $result->fetchSingle();
     }
 
-    // CHECK IF IS NEW DAY AFTER $i DATE
-    // ---------------------------------
-    // - return true if is older row previous day
 
-    public function newDay($i)
-    {
-        if ($this->dayFormat($this->getOne($i)["unix_timestamp"]) != $this->dayFormat($this->getOne($i + 1)["unix_timestamp"]))
-            return true;
-        else
-            return false;
-    }
+    // CHECKERS
+    // ========
+
+        // NORMAL CHECKERS
+        // ===============
+
+            // CHECK IF IS NEW DAY AFTER $i DATE
+            // ---------------------------------
+            // - return true if is older row previous day
+
+            public function newDay($i){
+                if ($this->dayFormat($this->getOne($i)["unix_timestamp"]) != $this->dayFormat($this->getOne($i + 1)["unix_timestamp"]))
+                    return true;
+                else
+                    return false;
+            }
+
+            // CHECK IF IS NEW YEAR AFTER $i DATE
+            // ----------------------------------
+            // - return true if is older row previous day
+
+            public function newYear($i){
+                if ($this->yearFormat($this->getOne($i)["unix_timestamp"]) != $this->yearFormat($this->getOne($i + 1)["unix_timestamp"]))
+                    return true;
+                else
+                    return false;
+            }
+
+        // REVERSED CHECKERS
+        // ===============
+
+            // CHECK IF IS NEW DAY AFTER $i DATE - REVERSED
+            // --------------------------------------------
+            // - return true if is older row previous day
+
+            public function newDayReversed($i){
+                if ($this->dayFormat($this->getOne($i)["unix_timestamp"]) != $this->dayFormat($this->getOne($i - 1)["unix_timestamp"]))
+                    return true;
+                else
+                    return false;
+            }
+
+            // CHECK IF IS NEW YEAR AFTER $i DATE - REVERSED
+            // ----------------------------------
+            // - return true if is older row previous day
+
+            public function newYearReversed($i){
+                if ($this->yearFormat($this->getOne($i)["unix_timestamp"]) != $this->yearFormat($this->getOne($i - 1)["unix_timestamp"]))
+                    return true;
+                else
+                    return false;
+            }
 
 
     // BOX COLOR
