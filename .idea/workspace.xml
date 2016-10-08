@@ -5,10 +5,7 @@
     <list id="7576b171-da3b-4242-b20e-bd31b6e71c58" name="v0.3" comment="Added graph system" />
     <list default="true" id="df29627b-0c60-4827-b4cf-5c2ebe5d411d" name="v0.3.2" comment="- New names of methods&#10;- Detail comments of methods">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/api/apiDbConnect.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/api/temp.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/php/dbconnect.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/php/graphData/apiDbConnect.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/php/graphData/todayTemp.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
@@ -39,7 +36,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
@@ -47,6 +44,16 @@
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="apiDbConnect.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/api/apiDbConnect.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,6 +130,7 @@
         <option value="$PROJECT_DIR$/php/.htaccess" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/php/api/apiDbConnect.php" />
       </list>
     </option>
   </component>
@@ -513,7 +521,7 @@
       <option name="project" value="LOCAL" />
       <updated>1475876954756</updated>
       <workItem from="1475876954805" duration="3009000" />
-      <workItem from="1475913672963" duration="953000" />
+      <workItem from="1475913672963" duration="1031000" />
     </task>
     <task id="LOCAL-00030" summary="Create API">
       <created>1475878164236</created>
@@ -529,19 +537,26 @@
       <option name="project" value="LOCAL" />
       <updated>1475878212869</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Rename folder of api">
+      <created>1475915157101</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1475915157101</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37982000" />
+    <option name="totallyTimeSpent" value="38060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-280" width="1920" height="1080" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10572917" sideWeight="0.88383347" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10572917" sideWeight="0.88383347" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -596,7 +611,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Připojení k databázi" />
     <MESSAGE value="Error in gitignore" />
     <MESSAGE value="Neviditelné soubory v gitignore" />
     <MESSAGE value="Total maximum and minimum + timeFormat methods" />
@@ -621,7 +635,8 @@
     <MESSAGE value="Detailed comments, changed names of methods" />
     <MESSAGE value="Create API" />
     <MESSAGE value="Updated gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated gitignore" />
+    <MESSAGE value="Rename folder of api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename folder of api" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
@@ -632,14 +647,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/php/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/temperature.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1020">
@@ -1054,6 +1061,14 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/api/apiDbConnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
