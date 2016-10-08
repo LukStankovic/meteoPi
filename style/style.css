@@ -338,7 +338,7 @@ nav ul li {
     -moz-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
     transition: 0.3s all ease; }
-    nav ul li a:hover {
+    nav ul li a:hover, nav ul li a.active {
       background: #e01c37;
       cursor: pointer; }
 

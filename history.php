@@ -3,11 +3,6 @@ include_once "php/config.php";
 
 $temp = new temperature();
 
-$maxDay = $temp->maxDayTemperature();
-$minDay = $temp->minDayTemperature();
-
-$maxTotal = $temp->maxTotalTemperature();
-$minTotal = $temp->minTotalTemperature();
 ?>
 
 <?php include_once "php/head.php"; ?>
@@ -20,9 +15,9 @@ $minTotal = $temp->minTotalTemperature();
 
     <h2>Teploty po 15 minutách</h2>
     <ul>
-        <?php for($i = 0; $i < $temp->countRows(); $i++){ ?>
+        <?php foreach ($temp->getAll() as $i => $item){ ?>
 
-            <li><?php echo $temp->dateFormat($temp->getDate($i)).": <strong>".$temp->getTemperature($i)."</strong>"?></li>
+            <li><?php echo $temp->dateFormat($item["unix_timestamp"]).": <strong>".$item["temperature"]." °C</strong>"?></li>
 
             <?php
             if($temp->newDay($i))

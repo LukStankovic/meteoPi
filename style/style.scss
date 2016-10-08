@@ -58,7 +58,7 @@ nav ul li{
     padding: 0 15px;
     @include prefixy(transition, 0.3s all ease);
 
-    &:hover{
+    &:hover, &.active{
       background: $cervena-sv;
       cursor: pointer;
     }
