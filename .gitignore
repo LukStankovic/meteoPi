@@ -1,6 +1,6 @@
 
 .idea/workspace.xml
 php/dbconnect.php
-php/graphData/apiDbConnect.php
 .*
 !/.gitignore
+/php/api/apiDbConnect.php
