@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="sl-3">
-                <div class="box lowest-today" style="background: <?php echo $temp->boxColor($temp->minTodayTemperature()["date"]);?>">
+                <div class="box lowest-today" style="background: <?php echo $temp->boxColor($temp->minTodayTemperature()["temperature"]);?>">
                     <div class="box__header">
                         <i class="fa fa-arrow-down" aria-hidden="true"></i> Nejnižší denní teplota
                     </div>
@@ -119,7 +119,7 @@
             </div>
 
             <div class="sl-4">
-                <div class="box avg-temp-today" style="background: <?php echo $temp->boxColor($temp->averageTotalTemperature()["temperature"]);?>">
+                <div class="box avg-temp-today" style="background: <?php echo $temp->boxColor($temp->averageTotalTemperature());?>">
                     <div class="box__header">
                         <i class="fa fa-tasks" aria-hidden="true"></i> Celková průměrná teplota
                     </div>
@@ -189,14 +189,32 @@
      </div>
 <?php include_once "php/footer.php"; ?>
     <script>
-
-        AmCharts.makeChart( "teplota_od_zacatku_dne", {
+        var chart = AmCharts.makeChart("teplota_od_zacatku_dne", {
             "type": "serial",
             "dataLoader": {
-                "url": "todayTemp.php",
+                "url": "php/api/temp.php",
                 "format": "json"
-            }
+            },
+            "categoryField": "date",
+            "dataDateFormat": "YYYY-MM-DD",
+            "startDuration": 1,
+            "rotate": false,
+            "categoryAxis": {
+                "parseDates": true
+            },
+            "graphs": [ {
+                "valueField": "temperature",
+                "bullet": "round",
+                "bulletBorderColor": "#000",
+                "bulletBorderThickness": 2,
+                "lineThickness ": 2,
+                "lineAlpha": 0.5
+            }]
         } );
+/*
+
+
+        */
 
         /*
         var chart;
