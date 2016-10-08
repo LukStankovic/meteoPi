@@ -5,7 +5,7 @@ var chart = AmCharts.makeChart("todaychart", {
     "type": "serial",
     "theme": "light",
     "marginTop":0,
-    "marginRight": 80,
+    "marginRight": 20,
 
     "dataLoader": {
         "url": "api.php?action=today"

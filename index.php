@@ -136,6 +136,11 @@
             </div>
         </div>
 
+
+        <h2>Vývoj teploty od půlnoci</h2>
+        <div id="todaychart" style="width: 100%; height: 400px;"></div>
+
+
         <h2>Spotřeba</h2>
         <div class="g-radek">
             <div class="sl-4">
@@ -183,9 +188,6 @@
                 </div>
             </div>
         </div>
-
-        <h2>Historie denních teplot</h2>
-        <div id="todaychart" style="width: 100%; height: 400px;"></div>
 
 
     </div>

@@ -31,6 +31,12 @@ h3{
   color: $cervena;
 }
 
+@media screen and (max-width: $scr-xs-max) {
+  h1, h2, h3{
+    margin-left: 10px;
+  }
+}
+
 // NAVIGACE
 // ========
 
@@ -108,6 +114,15 @@ nav ul li{
 // =========
 // Slouží pro rychlé výpisy informací
 
+.amcharts-export-menu.amcharts-export-menu-top-right.amExportButton{
+  top: -60px;
+}
+
+@media screen and (max-width: $scr-xs-max){
+  .amcharts-export-menu.amcharts-export-menu-top-right.amExportButton{
+    display: none;
+  }
+}
 
 // BOXÍKY
 // ------

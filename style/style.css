@@ -314,6 +314,9 @@ h3 {
   font-weight: 300;
   color: #c61931; }
 
+@media screen and (max-width: 767px) {
+  h1, h2, h3 {
+    margin-left: 10px; } }
 header {
   width: 100%;
   min-height: 50px;
@@ -366,6 +369,12 @@ nav ul li {
       width: 100%; }
     nav ul li:last-child a {
       border-bottom: 0px; } }
+.amcharts-export-menu.amcharts-export-menu-top-right.amExportButton {
+  top: -60px; }
+
+@media screen and (max-width: 767px) {
+  .amcharts-export-menu.amcharts-export-menu-top-right.amExportButton {
+    display: none; } }
 .box {
   width: 100%;
   min-height: 150px;
