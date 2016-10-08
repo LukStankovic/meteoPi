@@ -19,6 +19,7 @@
     <?php include_once "php/nav.php"; ?>
     <div class="obal">
 
+
         <h2>Denní statistiky</h2>
 
         <div class="g-radek">
@@ -183,8 +184,12 @@
             </div>
         </div>
 
-     </div>
-<?php include_once "php/footer.php"; ?>
+        <h2>Historie denních teplot</h2>
+        <div id="todaychart" style="width: 100%; height: 400px;"></div>
 
+
+    </div>
+<?php include_once "php/footer.php"; ?>
+    <script src="js/charts/todaychart.js" type="text/javascript"></script>
 </body>
 </html>

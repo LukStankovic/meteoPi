@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list id="1bbf2a16-5ed3-4f70-8411-9a74f7b7bb46" name="Default" comment="Added amcharts" />
     <list id="7576b171-da3b-4242-b20e-bd31b6e71c58" name="v0.3" comment="Added graph system" />
-    <list default="true" id="df29627b-0c60-4827-b4cf-5c2ebe5d411d" name="v0.3.2" comment="Updated menu and history">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/charts.php" />
+    <list default="true" id="df29627b-0c60-4827-b4cf-5c2ebe5d411d" name="v0.3.2" comment="Chart for avg temp for 2016">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/charts/todaychart.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api.php" afterPath="$PROJECT_DIR$/api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/charts.php" afterPath="$PROJECT_DIR$/charts.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/nav.php" afterPath="$PROJECT_DIR$/php/nav.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/temperature.php" afterPath="$PROJECT_DIR$/php/temperature.php" />
     </list>
     <ignored path="Weby.iws" />
@@ -41,11 +41,22 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="121" column="55" selection-start-line="121" selection-start-column="55" selection-end-line="121" selection-end-column="55" />
+            <state relative-caret-position="861">
+              <caret line="192" column="40" selection-start-line="192" selection-start-column="40" selection-end-line="192" selection-end-column="40" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="15" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,22 +64,53 @@
       <file leaf-file-name="charts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/charts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
+            <state relative-caret-position="615">
+              <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="39" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-                <marker date="1475931016000" expanded="true" signature="1038:1053" ph="..." />
+                <marker date="1475931342000" expanded="true" signature="1038:1053" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="temperature.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/temperature.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="107" column="39" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+              <folding>
+                <marker date="1475932246000" expanded="true" signature="597:638" ph="SELECT * FRO... teplota" />
+                <marker date="1475932246000" expanded="true" signature="1308:1348" ph="SELECT * FRO... teplota" />
+                <marker date="1475932246000" expanded="true" signature="4881:4926" ph="SELECT avg(t... teplota" />
+                <marker date="1475932246000" expanded="true" signature="8854:8963" ph="SELECT teplo... teplota" />
+                <marker date="1475932246000" expanded="true" signature="8929:8961" ph="SELECT max(t... teplota" />
+                <marker date="1475932246000" expanded="true" signature="9173:9282" ph="SELECT teplo... teplota" />
+                <marker date="1475932246000" expanded="true" signature="9248:9280" ph="SELECT min(t... teplota" />
+                <marker date="1475932246000" expanded="true" signature="10165:10212" ph="SELECT count... teplota" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
+            <state relative-caret-position="525">
+              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="todaychart.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/charts/todaychart.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="26" />
+              <folding>
+                <marker date="1475932948000" expanded="true" signature="418:433" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,16 +120,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -113,25 +145,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="temperature.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/temperature.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="236" column="54" selection-start-line="236" selection-start-column="54" selection-end-line="236" selection-end-column="54" />
-              <folding>
-                <marker date="1475930336000" expanded="true" signature="565:606" ph="SELECT * FRO... teplota" />
-                <marker date="1475930336000" expanded="true" signature="922:962" ph="SELECT * FRO... teplota" />
-                <marker date="1475930336000" expanded="true" signature="4268:4313" ph="SELECT avg(t... teplota" />
-                <marker date="1475930336000" expanded="true" signature="8241:8350" ph="SELECT teplo... teplota" />
-                <marker date="1475930336000" expanded="true" signature="8316:8348" ph="SELECT max(t... teplota" />
-                <marker date="1475930336000" expanded="true" signature="8560:8669" ph="SELECT teplo... teplota" />
-                <marker date="1475930336000" expanded="true" signature="8635:8667" ph="SELECT min(t... teplota" />
-                <marker date="1475930336000" expanded="true" signature="9552:9599" ph="SELECT count... teplota" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/config.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -148,6 +161,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -178,10 +192,12 @@
         <option value="$PROJECT_DIR$/style/style.scss" />
         <option value="$PROJECT_DIR$/history.php" />
         <option value="$PROJECT_DIR$/php/nav.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/php/temperature.php" />
         <option value="$PROJECT_DIR$/charts.php" />
+        <option value="$PROJECT_DIR$/js/charts/todaychar.js" />
+        <option value="$PROJECT_DIR$/php/temperature.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/api.php" />
+        <option value="$PROJECT_DIR$/js/charts/todaychart.js" />
       </list>
     </option>
   </component>
@@ -267,6 +283,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="php" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meteoPi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meteopi" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="charts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meteoPi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meteopi" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -570,7 +618,7 @@
       <workItem from="1475876954805" duration="3009000" />
       <workItem from="1475913672963" duration="1940000" />
       <workItem from="1475916819888" duration="2256000" />
-      <workItem from="1475922743841" duration="6399000" />
+      <workItem from="1475922743841" duration="8213000" />
     </task>
     <task id="LOCAL-00030" summary="Create API">
       <created>1475878164236</created>
@@ -642,12 +690,19 @@
       <option name="project" value="LOCAL" />
       <updated>1475919035160</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Chart for avg temp for 2016">
+      <created>1475931107258</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1475931107258</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47624000" />
+    <option name="totallyTimeSpent" value="49438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-280" width="1920" height="1080" extended-state="0" />
@@ -709,7 +764,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added grid system" />
     <MESSAGE value="Added container to grid system" />
     <MESSAGE value="Boxes with temperature" />
     <MESSAGE value="Header styles" />
@@ -734,7 +788,8 @@
     <MESSAGE value="Change API path" />
     <MESSAGE value="Delete old api" />
     <MESSAGE value="Updated menu and history" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated menu and history" />
+    <MESSAGE value="Chart for avg temp for 2016" />
+    <option name="LAST_COMMIT_MESSAGE" value="Chart for avg temp for 2016" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
@@ -745,24 +800,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/history.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/head.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -776,14 +813,14 @@
         <state relative-caret-position="1110">
           <caret line="74" column="37" selection-start-line="74" selection-start-column="37" selection-end-line="74" selection-end-column="37" />
           <folding>
-            <marker date="1475930336000" expanded="true" signature="565:606" ph="SELECT * FRO... teplota" />
-            <marker date="1475930336000" expanded="true" signature="922:962" ph="SELECT * FRO... teplota" />
-            <marker date="1475930336000" expanded="true" signature="4268:4313" ph="SELECT avg(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8241:8350" ph="SELECT teplo... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8316:8348" ph="SELECT max(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8560:8669" ph="SELECT teplo... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8635:8667" ph="SELECT min(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="9552:9599" ph="SELECT count... teplota" />
+            <marker date="1475932246000" expanded="true" signature="597:638" ph="SELECT * FRO... teplota" />
+            <marker date="1475932246000" expanded="true" signature="1308:1348" ph="SELECT * FRO... teplota" />
+            <marker date="1475932246000" expanded="true" signature="4881:4926" ph="SELECT avg(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="8854:8963" ph="SELECT teplo... teplota" />
+            <marker date="1475932246000" expanded="true" signature="8929:8961" ph="SELECT max(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="9173:9282" ph="SELECT teplo... teplota" />
+            <marker date="1475932246000" expanded="true" signature="9248:9280" ph="SELECT min(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="10165:10212" ph="SELECT count... teplota" />
           </folding>
         </state>
       </provider>
@@ -824,6 +861,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -841,14 +879,14 @@
         <state relative-caret-position="195">
           <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
           <folding>
-            <marker date="1475930336000" expanded="true" signature="565:606" ph="SELECT * FRO... teplota" />
-            <marker date="1475930336000" expanded="true" signature="922:962" ph="SELECT * FRO... teplota" />
-            <marker date="1475930336000" expanded="true" signature="4268:4313" ph="SELECT avg(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8241:8350" ph="SELECT teplo... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8316:8348" ph="SELECT max(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8560:8669" ph="SELECT teplo... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8635:8667" ph="SELECT min(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="9552:9599" ph="SELECT count... teplota" />
+            <marker date="1475932246000" expanded="true" signature="597:638" ph="SELECT * FRO... teplota" />
+            <marker date="1475932246000" expanded="true" signature="1308:1348" ph="SELECT * FRO... teplota" />
+            <marker date="1475932246000" expanded="true" signature="4881:4926" ph="SELECT avg(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="8854:8963" ph="SELECT teplo... teplota" />
+            <marker date="1475932246000" expanded="true" signature="8929:8961" ph="SELECT max(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="9173:9282" ph="SELECT teplo... teplota" />
+            <marker date="1475932246000" expanded="true" signature="9248:9280" ph="SELECT min(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="10165:10212" ph="SELECT count... teplota" />
           </folding>
         </state>
       </provider>
@@ -859,6 +897,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -877,6 +916,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -894,14 +934,14 @@
         <state relative-caret-position="1065">
           <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
           <folding>
-            <marker date="1475930336000" expanded="true" signature="565:606" ph="SELECT * FRO... teplota" />
-            <marker date="1475930336000" expanded="true" signature="922:962" ph="SELECT * FRO... teplota" />
-            <marker date="1475930336000" expanded="true" signature="4268:4313" ph="SELECT avg(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8241:8350" ph="SELECT teplo... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8316:8348" ph="SELECT max(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8560:8669" ph="SELECT teplo... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8635:8667" ph="SELECT min(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="9552:9599" ph="SELECT count... teplota" />
+            <marker date="1475932246000" expanded="true" signature="597:638" ph="SELECT * FRO... teplota" />
+            <marker date="1475932246000" expanded="true" signature="1308:1348" ph="SELECT * FRO... teplota" />
+            <marker date="1475932246000" expanded="true" signature="4881:4926" ph="SELECT avg(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="8854:8963" ph="SELECT teplo... teplota" />
+            <marker date="1475932246000" expanded="true" signature="8929:8961" ph="SELECT max(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="9173:9282" ph="SELECT teplo... teplota" />
+            <marker date="1475932246000" expanded="true" signature="9248:9280" ph="SELECT min(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="10165:10212" ph="SELECT count... teplota" />
           </folding>
         </state>
       </provider>
@@ -919,6 +959,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -929,6 +970,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1014,14 +1056,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/graphData/apiDbConnect.php" />
-    <entry file="file://$PROJECT_DIR$/php/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess" />
     <entry file="file://$PROJECT_DIR$/php/head.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1068,57 +1102,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="60" column="14" selection-start-line="60" selection-start-column="14" selection-end-line="60" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/temperature.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="236" column="54" selection-start-line="236" selection-start-column="54" selection-end-line="236" selection-end-column="54" />
-          <folding>
-            <marker date="1475930336000" expanded="true" signature="565:606" ph="SELECT * FRO... teplota" />
-            <marker date="1475930336000" expanded="true" signature="922:962" ph="SELECT * FRO... teplota" />
-            <marker date="1475930336000" expanded="true" signature="4268:4313" ph="SELECT avg(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8241:8350" ph="SELECT teplo... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8316:8348" ph="SELECT max(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8560:8669" ph="SELECT teplo... teplota" />
-            <marker date="1475930336000" expanded="true" signature="8635:8667" ph="SELECT min(t... teplota" />
-            <marker date="1475930336000" expanded="true" signature="9552:9599" ph="SELECT count... teplota" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/charts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="47" column="39" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
-            <marker date="1475931016000" expanded="true" signature="1038:1053" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="121" column="55" selection-start-line="121" selection-start-column="55" selection-end-line="121" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1130,11 +1118,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/charts/todaychar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="15" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="861">
+          <caret line="192" column="40" selection-start-line="192" selection-start-column="40" selection-end-line="192" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="72" selection-start-line="23" selection-start-column="72" selection-end-line="23" selection-end-column="72" />
+        <state relative-caret-position="525">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/charts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="47" column="12" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="39" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <marker date="1475931342000" expanded="true" signature="1038:1053" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/temperature.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="107" column="39" selection-start-line="107" selection-start-column="39" selection-end-line="107" selection-end-column="39" />
+          <folding>
+            <marker date="1475932246000" expanded="true" signature="597:638" ph="SELECT * FRO... teplota" />
+            <marker date="1475932246000" expanded="true" signature="1308:1348" ph="SELECT * FRO... teplota" />
+            <marker date="1475932246000" expanded="true" signature="4881:4926" ph="SELECT avg(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="8854:8963" ph="SELECT teplo... teplota" />
+            <marker date="1475932246000" expanded="true" signature="8929:8961" ph="SELECT max(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="9173:9282" ph="SELECT teplo... teplota" />
+            <marker date="1475932246000" expanded="true" signature="9248:9280" ph="SELECT min(t... teplota" />
+            <marker date="1475932246000" expanded="true" signature="10165:10212" ph="SELECT count... teplota" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/charts/todaychart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="26" />
+          <folding>
+            <marker date="1475932948000" expanded="true" signature="418:433" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -26,3 +26,16 @@ if($_GET["action"] == "avgdays2016"){
 
     echo json_encode($tempWithDate);
 }
+
+if($_GET["action"] == "today"){
+    $temp = new temperature();
+
+    foreach ($temp->getToday() as $key => $item){
+        $tempWithDate[$key]["date"] = $temp->timeFormat($item["unix_timestamp"]);
+        $tempWithDate[$key]["temperature"] = round($item["temperature"],3);
+        $tempWithDate[$key]["color"] = $temp->boxColor($item["temperature"]);
+
+    }
+
+    echo json_encode(array_reverse($tempWithDate));
+}

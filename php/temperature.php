@@ -5,6 +5,9 @@ class temperature{
     private $data = array();
     private $dataReversed = array();
 
+    private $today = array();
+
+
     // CONSTRUCTOR
     // -----------
     // - getting data from database
@@ -18,11 +21,21 @@ class temperature{
     public function __construct(){
         $result = dibi::query('SELECT * FROM teplota ORDER BY datum DESC');
 
+        $vys = $result->fetchAll();
 
         foreach ($result->fetchAll() as $i => $row){
             $this->data[$i]["temperature"] = $row["teplota"];
             $this->data[$i]["date"] = $this->dateTimeFormat($row["datum"]);
             $this->data[$i]["unix_timestamp"] = strtotime($row["datum"]);
+        }
+
+        foreach ($vys as $i => $row){
+            $this->today[$i]["temperature"] = $row["teplota"];
+            $this->today[$i]["date"] = $this->timeFormat($row["datum"]);
+            $this->today[$i]["unix_timestamp"] = strtotime($row["datum"]);
+
+            if($this->newDay($i))
+                break;
         }
 
         $resultRev = dibi::query('SELECT * FROM teplota ORDER BY datum ASC');
@@ -32,6 +45,8 @@ class temperature{
             $this->dataReversed[$i]["date"] = $this->dateTimeFormat($row["datum"]);
             $this->dataReversed[$i]["unix_timestamp"] = strtotime($row["datum"]);
         }
+
+
 
     }
 
@@ -84,18 +99,18 @@ class temperature{
                 return date("Y",strtotime($date));
         }
 
-    // TIME FORMAT
+        // TIME FORMAT
         // --------------------
         // - format: 18:25
 
         public function timeFormat($date){
             if(is_int($date))
-                return date("H:i",strtotime($date));
+                return date("H:i",$date);
             else
                 return date("H:i",strtotime($date));
         }
 
-        // TIME FORMAT
+        // DAY FORMAT
         // --------------------
         // - format: 30
 
@@ -126,8 +141,15 @@ class temperature{
             return $this->dataReversed;
         }
 
+        // GET TODAY DATA - REVERSED
+        // -----------------------
+        // - returns array of all temperatures with date - from first row!!!
 
-    // GET ONE TEMPERATURE WITH DATE TIME
+        public function getToday(){
+            return $this->today;
+        }
+
+        // GET ONE TEMPERATURE WITH DATE TIME
         // ----------------------------------
         // - returns array of all temperatures with date
 

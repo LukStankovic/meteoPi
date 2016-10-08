@@ -18,7 +18,7 @@ $start = $temp->energyConsumption($kwh_cost)["start_date"];
 
 <?php include_once "php/nav.php"; ?>
 <div class="obal">
-    <h2>Průměrné hodnoty roku 2016</h2>
+    <h2>Průměrné teploty roku 2016</h2>
     <div id="avgdays2016" style="width: 100%; height: 400px;"></div>
 
 </div>
@@ -40,7 +40,7 @@ $start = $temp->energyConsumption($kwh_cost)["start_date"];
         }],
         "graphs": [{
             "id":"g1",
-            "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[value]]</span></b>",
+            "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[value]] °C</span></b>",
             "fillAlphas": 0.8,
             "lineAlpha": 0.2,
             "type": "column",
