@@ -29,7 +29,7 @@ $start = $temp->energyConsumption($kwh_cost)["start_date"];
         "type": "serial",
         "theme": "light",
         "marginTop":0,
-        "marginRight": 80,
+        "marginRight": 20,
 
         "dataLoader": {
             "url": "api.php?action=avgdays2016"

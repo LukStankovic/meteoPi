@@ -176,7 +176,7 @@ class temperature{
         // - return float
 
         public function averageTotalTemperature(){
-            $result = dibi::query('SELECT avg(teplota) as countrows FROM teplota');
+            $result = dibi::query('SELECT avg(teplota) FROM teplota');
             return $result->fetchSingle();
         }
 
@@ -185,18 +185,13 @@ class temperature{
         // - return float
 
         public function averageTodayTemperature(){
+            $result = dibi::query("SELECT avg(teplota) as avgtemp
+                               FROM teplota 
+                               WHERE date_format(datum,\"%e. %c\") = date_format(now(),\"%e. %c\")
+                               ORDER BY datum ASC");
 
-            $total = 0;
+            return $result->fetchSingle();
 
-            for($i = 1; $i < $this->countAll(); $i++) {
-
-                $total += $this->getOne($i)["temperature"];
-
-                if ($this->newDay($i))
-                    break;
-            }
-
-            return $total/$i;
         }
 
 
@@ -207,31 +202,14 @@ class temperature{
 
         public function averageDaysTemperature(){
 
-            $tmp = 0;
+            $result = dibi::query("SELECT  date_format(datum,\"%e. %c.\") as day, avg(teplota) as avgtemp
+                               FROM teplota
+                               GROUP BY day
+                               ORDER BY datum ASC");
 
-            $j = 0;
-            $k = 0;
-            $values = array();
+            $vys = $result->fetchAll();
 
-
-            foreach ($this->getAllReversed() as $i => $value){
-
-                $tmp += floatval($value["temperature"]);
-
-                if ($this->newDayReversed($i) && $i != 0){
-
-                    $values[$j]["unix_timestamp"] = $value["unix_timestamp"];
-                    $values[$j]["avgtemp"] = $tmp/$k;
-
-                    $j++;
-                    $tmp = 0;
-                    $k = 0;
-                }
-                $k++;
-
-            }
-
-            return $values;
+            return $vys;
         }
 
     // AVERAGE TEMPERATURE - ALL DAYS FOR ONE YEAR
@@ -240,35 +218,16 @@ class temperature{
 
 
     public function averageDaysTemperatureYear($year){
+        $result = dibi::query("SELECT  date_format(datum,\"%e. %c.\") as day, avg(teplota) as avgtemp
+                               FROM teplota 
+                               WHERE date_format(datum,\"%Y\") = %s
+                               GROUP BY day
+                               ORDER BY datum ASC",$year);
 
-        $tmp = 0;
+        $vys = $result->fetchAll();
 
-        $j = 0;
-        $k = 0;
-        $values = array();
+        return $vys;
 
-
-        foreach ($this->getAllReversed() as $i => $value){
-
-            if($this->yearFormat($value["unix_timestamp"]) != $year)
-                break;
-
-            $tmp += floatval($value["temperature"]);
-
-
-            if ($this->newDayReversed($i) && $i != 0){
-
-                $values[$j]["unix_timestamp"] = $value["unix_timestamp"];
-                $values[$j]["avgtemp"] = $tmp/$k;
-
-                $j++;
-                $tmp = 0;
-                $k = 0;
-            }
-            $k++;
-        }
-
-        return $values;
     }
 
         // AVERAGE TEMPERATURE - DAY

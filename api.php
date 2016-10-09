@@ -19,7 +19,7 @@ if($_GET["action"] == "avgdays2016"){
     $temp = new temperature();
 
     foreach ($temp->averageDaysTemperatureYear(2016) as $key => $item){
-        $tempWithDate[$key]["date"] = date("j. n.",$item["unix_timestamp"]);
+        $tempWithDate[$key]["date"] = $item["day"];
         $tempWithDate[$key]["temperature"] = round($item["avgtemp"],3);
         $tempWithDate[$key]["color"] = $temp->boxColor($item["avgtemp"]);
     }
