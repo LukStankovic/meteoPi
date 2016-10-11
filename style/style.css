@@ -308,7 +308,8 @@ h1 {
 
 h2 {
   font-weight: 400;
-  color: #c61931; }
+  color: #c61931;
+  font-size: 24px; }
 
 h3 {
   font-weight: 300;
@@ -393,5 +394,17 @@ nav ul li {
   margin-bottom: 10px;
   font-size: 25px;
   font-weight: 300; }
+
+h2 input {
+  font-weight: 400;
+  color: #c61931;
+  font-size: 24px;
+  border: 0;
+  width: 55px;
+  border-bottom: 2px dotted #c61931;
+  text-align: center; }
+  h2 input:focus {
+    outline: none;
+    border-bottom: 2px solid #c61931; }
 
 /*# sourceMappingURL=style.css.map */

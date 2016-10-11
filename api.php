@@ -27,6 +27,18 @@ if($_GET["action"] == "avgdays2016"){
     echo json_encode($tempWithDate);
 }
 
+if($_GET["action"] == "interactiveYear" && isset($_GET["year"])){
+    $temp = new temperature();
+
+    foreach ($temp->averageDaysTemperatureYear($_GET["year"]) as $key => $item){
+        $tempWithDate[$key]["date"] = $item["day"];
+        $tempWithDate[$key]["temperature"] = round($item["avgtemp"],3);
+        $tempWithDate[$key]["color"] = $temp->boxColor($item["avgtemp"]);
+    }
+
+    echo json_encode($tempWithDate);
+}
+
 if($_GET["action"] == "today"){
     $temp = new temperature();
 

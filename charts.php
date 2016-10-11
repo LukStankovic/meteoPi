@@ -10,6 +10,9 @@ $cost = $temp->energyConsumption($kwh_cost)["cost"];
 $up_time = $temp->energyConsumption($kwh_cost)["uptime"];
 $start = $temp->energyConsumption($kwh_cost)["start_date"];
 
+$year = $_GET["year"];
+$month = $_GET["month"];
+$day = $_GET["day"];
 ?>
 
 <?php include_once "php/head.php"; ?>
@@ -18,21 +21,23 @@ $start = $temp->energyConsumption($kwh_cost)["start_date"];
 
 <?php include_once "php/nav.php"; ?>
 <div class="obal">
-    <h2>Průměrné teploty roku 2016</h2>
-    <div id="avgdays2016" style="width: 100%; height: 400px;"></div>
+    <form method="get">
+    <h2>Průměrné teploty roku <input type="text" name="year" class="interactiveYear" value="<?php echo $year; ?>" maxlength="4"></h2>
+    </form>
 
+    <div id="interactiveYear" style="width: 100%; height: 400px;"></div>
 </div>
 <?php include_once "php/footer.php"; ?>
-
 <script>
-    var chart = AmCharts.makeChart("avgdays2016", {
+
+    var chart = AmCharts.makeChart("interactiveYear", {
         "type": "serial",
         "theme": "light",
         "marginTop":0,
         "marginRight": 20,
 
         "dataLoader": {
-            "url": "api.php?action=avgdays2016"
+            "url": "api.php?action=interactiveYear&year=<?php echo $year; ?>&month=<?php echo $month; ?>&day=<?php echo $day; ?>"
         },
         "valueAxes": [{
             "axisAlpha": 0,
@@ -93,6 +98,7 @@ $start = $temp->energyConsumption($kwh_cost)["start_date"];
     function zoomChart(){
         chart.zoomToIndexes(Math.round(chart.dataProvider.length * 0.4), Math.round(chart.dataProvider.length * 0.55));
     }
+
 </script>
 
 </body>
