@@ -17,8 +17,8 @@
 <body id="dashboard">
 
     <?php include_once "php/nav.php"; ?>
-    <div class="obal">
 
+    <div class="obal">
         <h2>Denní statistiky</h2>
 
         <div class="g-radek">

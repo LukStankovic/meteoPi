@@ -1,9 +1,9 @@
 <?php
 
-class temperature{
+class temperature
+{
 
     private $data = array();
-    private $dataReversed = array();
 
     private $today = array();
 
@@ -18,155 +18,173 @@ class temperature{
     //              - date -> show date time in human like format
     //              - unix_timestamp -> show datetime in seconds since  1. 1. 1970
 
-    public function __construct(){
+    public function __construct()
+    {
         $result = dibi::query('SELECT * FROM teplota ORDER BY datum DESC');
 
         $vys = $result->fetchAll();
 
-        foreach ($result->fetchAll() as $i => $row){
+        foreach ($result->fetchAll() as $i => $row) {
             $this->data[$i]["temperature"] = $row["teplota"];
             $this->data[$i]["date"] = $this->dateTimeFormat($row["datum"]);
             $this->data[$i]["unix_timestamp"] = strtotime($row["datum"]);
         }
 
-        foreach ($vys as $i => $row){
+        foreach ($vys as $i => $row) {
             $this->today[$i]["temperature"] = $row["teplota"];
             $this->today[$i]["date"] = $this->timeFormat($row["datum"]);
             $this->today[$i]["unix_timestamp"] = strtotime($row["datum"]);
 
-            if($this->newDay($i))
+            if ($this->newDay($i))
                 break;
         }
-
-        $resultRev = dibi::query('SELECT * FROM teplota ORDER BY datum ASC');
-
-        foreach ($resultRev->fetchAll() as $i => $row){
-            $this->dataReversed[$i]["temperature"] = $row["teplota"];
-            $this->dataReversed[$i]["date"] = $this->dateTimeFormat($row["datum"]);
-            $this->dataReversed[$i]["unix_timestamp"] = strtotime($row["datum"]);
-        }
-
-
 
     }
 
     // DATE AND TIME FORMATS
     // =====================
 
-        // DATE AND TIME FORMAT
-        // --------------------
-        // - format: 02. 12. 2017 18:25
+    // DATE AND TIME FORMAT
+    // --------------------
+    // - format: 02. 12. 2017 18:25
 
-        public function dateTimeFormat($date){
-            if(is_int($date))
-                return date("j. n. Y H:i",$date);
-            else
-                return date("j. n. Y H:i",strtotime($date));
-        }
+    public function dateTimeFormat($date)
+    {
+        if (is_int($date))
+            return date("j. n. Y H:i", $date);
+        else
+            return date("j. n. Y H:i", strtotime($date));
+    }
 
-        // DATE FORMAT
-        // -----------
-        // - format: 02. 12. 2017
+    // DATE FORMAT
+    // -----------
+    // - format: 02. 12. 2017
 
-        public function dateFormat($date){
-            if(is_int($date))
-                return date("j. n. Y",$date);
-            else
-                return date("j. n. Y",strtotime($date));
-        }
-
-
-        // DATE FORMAT
-        // -----------
-        // - format: 12
-
-        public function monthFormat($date){
-            if(is_int($date))
-                return date("n",$date);
-            else
-                return date("n",strtotime($date));
-        }
+    public function dateFormat($date)
+    {
+        if (is_int($date))
+            return date("j. n. Y", $date);
+        else
+            return date("j. n. Y", strtotime($date));
+    }
 
 
-        // DATE FORMAT
-        // -----------
-        // - format: 2017
+    // DATE FORMAT
+    // -----------
+    // - format: 12
 
-        public function yearFormat($date){
-            if(is_int($date))
-                return date("Y",$date);
-            else
-                return date("Y",strtotime($date));
-        }
+    public function monthFormat($date)
+    {
+        if (is_int($date))
+            return date("n", $date);
+        else
+            return date("n", strtotime($date));
+    }
 
-        // TIME FORMAT
-        // --------------------
-        // - format: 18:25
 
-        public function timeFormat($date){
-            if(is_int($date))
-                return date("H:i",$date);
-            else
-                return date("H:i",strtotime($date));
-        }
+    // DATE FORMAT
+    // -----------
+    // - format: 2017
 
-        // DAY FORMAT
-        // --------------------
-        // - format: 30
+    public function yearFormat($date)
+    {
+        if (is_int($date))
+            return date("Y", $date);
+        else
+            return date("Y", strtotime($date));
+    }
 
-        public function dayFormat($date){
-            if(is_int($date))
-                return date("j",$date);
-            else
-                return date("j",strtotime($date));
-        }
+    // TIME FORMAT
+    // --------------------
+    // - format: 18:25
+
+    public function timeFormat($date)
+    {
+        if (is_int($date))
+            return date("H:i", $date);
+        else
+            return date("H:i", strtotime($date));
+    }
+
+    // DAY FORMAT
+    // --------------------
+    // - format: 30
+
+    public function dayFormat($date)
+    {
+        if (is_int($date))
+            return date("j", $date);
+        else
+            return date("j", strtotime($date));
+    }
 
 
     // GET TEMPERATURE AND DATE
     // ========================
 
-        // GET ALL DATA
-        // ------------
-        // - returns array of all temperatures with date - from now
+    // GET ALL DATA
+    // ------------
+    // - returns array of all temperatures with date - from now
 
-        public function getAll(){
-            return $this->data;
+    public function getAll()
+    {
+        return $this->data;
+    }
+
+    // GET TODAY DATA - REVERSED
+    // -----------------------
+    // - returns array of all temperatures with date - from first row!!!
+
+    public function getToday()
+    {
+        return $this->today;
+    }
+
+
+    // GET ONE TEMPERATURE WITH DATE TIME
+    // ----------------------------------
+    // - returns array of all temperatures with date
+
+    public function getOne($i)
+    {
+        return $this->data[$i];
+    }
+
+    // GET LATEST (actual) TEMPERATURE WITH DATETIME
+    // ---------------------------------------------
+    // - return array of latest temp
+
+    public function actualTemperature()
+    {
+        return $this->data[0];
+    }
+
+
+    // GET DAY
+    // -------
+
+    public function getDay($date){
+
+        if (isset($date["day"]) && isset($date["month"]) && isset($date["year"])) {
+
+           if (is_numeric($date["day"]) && is_numeric($date["month"]) && is_numeric($date["year"])) {
+
+
+                $res = dibi::query("SELECT datum AS date, teplota AS temperature
+                                    FROM teplota
+                                    WHERE date_format(datum,\"%e\") LIKE ".$date["day"]." AND date_format(datum,\"%c\") LIKE ".$date["month"]." AND  date_format(datum,\"%Y\") LIKE ".$date["year"]);
+
+                return $res->fetchAll();
+            }
+            else{
+                return 0;
+            }
+
         }
-
-        // GET ALL DATA - REVERSED
-        // -----------------------
-        // - returns array of all temperatures with date - from first row!!!
-
-        public function getAllReversed(){
-            return $this->dataReversed;
+        else{
+            return -1;
         }
-
-        // GET TODAY DATA - REVERSED
-        // -----------------------
-        // - returns array of all temperatures with date - from first row!!!
-
-        public function getToday(){
-            return $this->today;
-        }
-
-        // GET ONE TEMPERATURE WITH DATE TIME
-        // ----------------------------------
-        // - returns array of all temperatures with date
-
-        public function getOne($i){
-            return $this->data[$i];
-        }
-
-        // GET LATEST (actual) TEMPERATURE WITH DATETIME
-        // ---------------------------------------------
-        // - return array of latest temp
-
-        public function actualTemperature(){
-            return $this->data[0];
-        }
-
-
-
+    }
     // AVERAGES
     // ========
     // - returns averages of rows
@@ -188,7 +206,7 @@ class temperature{
             $result = dibi::query("SELECT avg(teplota) as avgtemp
                                FROM teplota 
                                WHERE date_format(datum,\"%e. %c\") = date_format(now(),\"%e. %c\")
-                               ORDER BY datum ASC");
+                               ORDER BY datum DESC");
 
             return $result->fetchSingle();
 
@@ -205,7 +223,7 @@ class temperature{
             $result = dibi::query("SELECT  date_format(datum,\"%e. %c.\") as day, avg(teplota) as avgtemp
                                FROM teplota
                                GROUP BY day
-                               ORDER BY datum ASC");
+                               ORDER BY datum DESC");
 
             $vys = $result->fetchAll();
 
@@ -217,18 +235,18 @@ class temperature{
     // - returns avg temperature of all days for one year
 
 
-    public function averageDaysTemperatureYear($year){
-        $result = dibi::query("SELECT  date_format(datum,\"%e. %c.\") as day, avg(teplota) as avgtemp
-                               FROM teplota 
-                               WHERE date_format(datum,\"%Y\") = %s
-                               GROUP BY day
-                               ORDER BY datum ASC",$year);
+        public function averageDaysTemperatureYear($year){
+            $result = dibi::query("SELECT  date_format(datum,\"%e. %c.\") as day, avg(teplota) as avgtemp
+                                   FROM teplota 
+                                   WHERE date_format(datum,\"%Y\") = %s
+                                   GROUP BY day
+                                   ORDER BY datum DESC",$year);
 
-        $vys = $result->fetchAll();
+            $vys = $result->fetchAll();
 
-        return $vys;
+            return $vys;
 
-    }
+        }
 
         // AVERAGE TEMPERATURE - DAY
         // -------------------

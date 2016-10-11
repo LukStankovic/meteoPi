@@ -8,7 +8,7 @@ var chart = AmCharts.makeChart("avgdaysYear", {
     "marginRight": 20,
 
     "dataLoader": {
-        "url": "api.php?action=avgdays2016"
+        "url": "api.php?action=interactiveYear"
     },
     "valueAxes": [{
         "axisAlpha": 0,
