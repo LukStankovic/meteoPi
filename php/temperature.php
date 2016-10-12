@@ -22,15 +22,13 @@ class temperature
     {
         $result = dibi::query('SELECT * FROM teplota ORDER BY datum DESC');
 
-        $vys = $result->fetchAll();
-
         foreach ($result->fetchAll() as $i => $row) {
             $this->data[$i]["temperature"] = $row["teplota"];
             $this->data[$i]["date"] = $this->dateTimeFormat($row["datum"]);
             $this->data[$i]["unix_timestamp"] = strtotime($row["datum"]);
         }
 
-        foreach ($vys as $i => $row) {
+        foreach ($result->fetchAll() as $i => $row) {
             $this->today[$i]["temperature"] = $row["teplota"];
             $this->today[$i]["date"] = $this->timeFormat($row["datum"]);
             $this->today[$i]["unix_timestamp"] = strtotime($row["datum"]);

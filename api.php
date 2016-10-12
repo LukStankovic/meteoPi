@@ -43,7 +43,7 @@ if($_GET["action"] == "interactiveDay" && isset($_GET["year"]) && isset($_GET["m
         $tempWithDate[$key]["color"] = $temp->boxColor($item["temperature"]);
     }
 
-    echo json_encode(array_reverse($tempWithDate));
+    echo json_encode($tempWithDate);
 }
 
 if($_GET["action"] == "today"){
@@ -56,5 +56,5 @@ if($_GET["action"] == "today"){
 
     }
 
-    echo json_encode(array_reverse($tempWithDate));
+    echo json_encode($tempWithDate);
 }
