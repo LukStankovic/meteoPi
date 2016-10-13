@@ -170,7 +170,8 @@ class temperature
 
                 $res = dibi::query("SELECT datum AS date, teplota AS temperature
                                     FROM teplota
-                                    WHERE date_format(datum,\"%e\") LIKE ".$date["day"]." AND date_format(datum,\"%c\") LIKE ".$date["month"]." AND  date_format(datum,\"%Y\") LIKE ".$date["year"]);
+                                    WHERE date_format(datum,\"%e\") LIKE ".$date["day"]." AND date_format(datum,\"%c\") LIKE ".$date["month"]." AND  date_format(datum,\"%Y\") LIKE ".$date["year"]
+                                    ." ORDER BY date DESC");
 
                 return $res->fetchAll();
             }
