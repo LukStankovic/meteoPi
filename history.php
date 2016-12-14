@@ -17,7 +17,7 @@ $temp = new temperature();
     <ul>
         <?php foreach ($temp->getAll() as $i => $item){ ?>
 
-            <li><?php echo $temp->dateFormat($item["unix_timestamp"]).": <strong>".$item["temperature"]." °C</strong>"?></li>
+            <li><?php echo $temp->dateTimeFormat($item["unix_timestamp"]).": <strong>".$item["temperature"]." °C</strong>"?></li>
 
             <?php
             if($temp->newDay($i))
