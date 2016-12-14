@@ -165,12 +165,8 @@ else
 
         },
         "chartCursor": {
-            "categoryBalloonDateFormat": "D. M.",
-            "cursorAlpha": 0,
-            "valueLineEnabled":true,
-            "valueLineBalloonEnabled":true,
-            "valueLineAlpha":0.5,
-            "fullWidth":true
+            "cursorPosition": "mouse",
+            "categoryBalloonDateFormat": "D. M."
         },
         "dataDateFormat": "D. M.",
         "categoryField": "date",

@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list id="1bbf2a16-5ed3-4f70-8411-9a74f7b7bb46" name="Default" comment="Added amcharts" />
     <list id="7576b171-da3b-4242-b20e-bd31b6e71c58" name="v0.3" comment="Added graph system" />
-    <list default="true" id="df29627b-0c60-4827-b4cf-5c2ebe5d411d" name="v0.3.2" comment="Fixed getDay method">
+    <list default="true" id="df29627b-0c60-4827-b4cf-5c2ebe5d411d" name="v0.3.2" comment="Disable averages nav + fix date time in history">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/history.php" afterPath="$PROJECT_DIR$/history.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/nav.php" afterPath="$PROJECT_DIR$/php/nav.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/charts.php" afterPath="$PROJECT_DIR$/charts.php" />
     </list>
     <ignored path="Weby.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,39 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="temperature.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/temperature.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2385">
-              <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
-              <folding>
-                <marker date="1476378322000" expanded="true" signature="566:607" ph="SELECT * FRO... teplota" />
-                <marker date="1476378322000" expanded="true" signature="3996:4089" ph="SELECT datum... teplota" />
-                <marker date="1476378322000" expanded="true" signature="3996:4162" ph="SELECT datum... teplota" />
-                <marker date="1476378322000" expanded="true" signature="3996:4214" ph="SELECT datum... teplota" />
-                <marker date="1476378322000" expanded="true" signature="3996:4269" ph="SELECT datum... teplota" />
-                <marker date="1476378322000" expanded="true" signature="3996:4270" ph="SELECT datum... teplota" />
-                <marker date="1476378322000" expanded="true" signature="3996:4343" ph="SELECT datum... teplota" />
-                <marker date="1476378322000" expanded="true" signature="3996:4344" ph="SELECT datum... teplota" />
-                <marker date="1476378322000" expanded="true" signature="4783:4815" ph="SELECT avg(t... teplota" />
-                <marker date="1476378322000" expanded="true" signature="5062:5287" ph="SELECT avg(t... teplota" />
-                <marker date="1476378322000" expanded="true" signature="5569:5778" ph="SELECT date_... teplota" />
-                <marker date="1476378322000" expanded="true" signature="6116:6410" ph="SELECT date_... teplota" />
-                <marker date="1476378322000" expanded="true" signature="8339:8448" ph="SELECT teplo... teplota" />
-                <marker date="1476378322000" expanded="true" signature="8414:8446" ph="SELECT max(t... teplota" />
-                <marker date="1476378322000" expanded="true" signature="8658:8767" ph="SELECT teplo... teplota" />
-                <marker date="1476378322000" expanded="true" signature="8733:8765" ph="SELECT min(t... teplota" />
-                <marker date="1476378322000" expanded="true" signature="9650:9697" ph="SELECT count... teplota" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="todaychart.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/charts/todaychart.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="36" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="36" />
+            <state relative-caret-position="358">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding>
                 <marker date="1475957520000" expanded="true" signature="418:433" ph="..." />
               </folding>
@@ -85,23 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="averageYearTemperatures.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/charts/averageYearTemperatures.js">
+      <file leaf-file-name="charts.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/charts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-              <folding>
-                <marker date="1476211933000" expanded="true" signature="429:444" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="averages.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/averages.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="439">
+              <caret line="115" column="24" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -110,8 +69,8 @@
       <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="39" column="40" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="40" />
+            <state relative-caret-position="195">
+              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -137,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="history.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="history.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/history.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+            <state relative-caret-position="75">
+              <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -186,13 +145,13 @@
         <option value="$PROJECT_DIR$/averages.php" />
         <option value="$PROJECT_DIR$/js/interactive/averageYearTemperatures.js" />
         <option value="$PROJECT_DIR$/style/style.scss" />
-        <option value="$PROJECT_DIR$/js/charts/averageYearTemperatures.js" />
-        <option value="$PROJECT_DIR$/charts.php" />
         <option value="$PROJECT_DIR$/api.php" />
         <option value="$PROJECT_DIR$/php/temperature.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/php/nav.php" />
         <option value="$PROJECT_DIR$/history.php" />
+        <option value="$PROJECT_DIR$/js/charts/averageYearTemperatures.js" />
+        <option value="$PROJECT_DIR$/charts.php" />
       </list>
     </option>
   </component>
@@ -234,8 +193,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -316,6 +273,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -629,7 +588,8 @@
       <workItem from="1476447767783" duration="156000" />
       <workItem from="1476568521528" duration="164000" />
       <workItem from="1476723486757" duration="7000" />
-      <workItem from="1481746952160" duration="375000" />
+      <workItem from="1481746952160" duration="451000" />
+      <workItem from="1481747700652" duration="320000" />
     </task>
     <task id="LOCAL-00030" summary="Create API">
       <created>1475878164236</created>
@@ -764,21 +724,28 @@
       <option name="project" value="LOCAL" />
       <updated>1476378388261</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Disable averages nav + fix date time in history">
+      <created>1481747638801</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1481747638801</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66985000" />
+    <option name="totallyTimeSpent" value="67381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-280" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07082002" sideWeight="0.88383347" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.071352504" sideWeight="0.88383347" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913843" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328807" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686713" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -809,7 +776,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Icons for boxes" />
     <MESSAGE value="Added footer.php" />
     <MESSAGE value="Edit footer.php" />
     <MESSAGE value="Added amcharts" />
@@ -834,7 +800,8 @@
     <MESSAGE value=" - Interactive graphs&#10; - is planing to select date with select (from database) -- for now only input type text" />
     <MESSAGE value="Fixed api." />
     <MESSAGE value="Fixed getDay method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed getDay method" />
+    <MESSAGE value="Disable averages nav + fix date time in history" />
+    <option name="LAST_COMMIT_MESSAGE" value="Disable averages nav + fix date time in history" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="PRESELECT_EXISTING_CHANGELIST" value="false" />
   </component>
@@ -1076,26 +1043,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/interactive/averageYearTemperatures.js" />
-    <entry file="file://$PROJECT_DIR$/js/charts/todaychart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <marker date="1475957520000" expanded="true" signature="418:433" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/charts/averageYearTemperatures.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding>
-            <marker date="1476211933000" expanded="true" signature="429:444" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2430">
@@ -1104,9 +1051,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="210" selection-start-line="6" selection-start-column="210" selection-end-line="6" selection-end-column="210" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/history.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/averages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/temperature.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2385">
+        <state relative-caret-position="949">
           <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
             <marker date="1476378322000" expanded="true" signature="566:607" ph="SELECT * FRO... teplota" />
@@ -1130,49 +1119,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/averages.php">
+    <entry file="file://$PROJECT_DIR$/js/charts/averageYearTemperatures.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="675">
+          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+          <folding>
+            <marker date="1481747891000" expanded="true" signature="429:444" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api.php">
+    <entry file="file://$PROJECT_DIR$/js/charts/todaychart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="40" />
-          <folding />
+        <state relative-caret-position="358">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <folding>
+            <marker date="1475957520000" expanded="true" signature="418:433" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/charts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/nav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="210" selection-start-line="6" selection-start-column="210" selection-end-line="6" selection-end-column="210" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/history.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        <state relative-caret-position="439">
+          <caret line="115" column="24" selection-start-line="115" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
           <folding />
         </state>
       </provider>
