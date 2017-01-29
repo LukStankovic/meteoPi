@@ -1,6 +1,5 @@
 <?php
     include_once "php/config.php";
-
     $temp = new temperature();
 
     $kwh_cost = 3.76;
